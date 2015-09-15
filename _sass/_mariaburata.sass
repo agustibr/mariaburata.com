@@ -1,0 +1,56 @@
+body
+  background: $color-pink
+  padding-top: $gradient-height
+  padding-bottom: $gradient-height
+  color: $color-white
+
+html,
+body,
+.container,
+.container-fluid
+  height: 100%
+
+.container,
+.container-fluid
+  display: table
+  vertical-align: middle
+
+.vertical-center-row
+  display: table-cell
+  vertical-align: middle
+
+
+.grad-top
+  height: $gradient-height
+  background: linear-gradient(to top, rgba($color-white, 0), $color-white)
+  border-top: 1em solid $color-white
+
+.grad-bottom
+  height: $gradient-height
+  background: linear-gradient(to bottom, rgba($color-white, 0), $color-white)
+  border-bottom: 1em solid $color-white
+
+.btn-menu-trigger
+  color: $color-pink
+  border-color: transparent
+.modal-backdrop
+  background-color: $color-white
+  &.in
+    opacity: 1
+.modal-content
+  border-color: transparent
+
+section
+  height: 80vh
+  width: 100%
+  border-bottom: 1px solid $color-white
+  display: table
+  .content
+    padding-top: $gradient-height
+    padding-bottom: $gradient-height
+    display: table-cell
+    vertical-align: middle
+.lead
+  font-size: 2em
+  padding-right: 1em
+  padding-left: 1em

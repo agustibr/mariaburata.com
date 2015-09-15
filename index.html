@@ -1,0 +1,97 @@
+---
+layout: default
+---
+<section id="top">
+  <div class="content text-center">
+    <h1 class="display-4">{{ site.title }}</h1>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="//player.vimeo.com/video/52693887?color=F9A995&title=0&byline=0&portrait=0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<section id="massatges">
+    <div class="content">
+      <p class="lead text-center">El terme Ayurveda prové del sànscrit, la llengua clàssica de l’hinduisme.
+    És format per la unió de dos mots: ayur, que
+    significa “vida” i veda, que vol dir “coneixement”.
+    A diferencia d’altres massatges que es centren
+    només en els aspectes més físics, el massatge
+    ayurvèdic treballa a tres nivells: físic, emocional
+    i energètic, oferint així una profunda sensació de
+    relaxació i benestar.</p>
+      <p class="lead text-center">Mitjançant tècniques d’amassament, digito-puntura
+    i fricció es relaxen el sistema circulatori, emocional,
+    energètic i muscular; ajudant així a eliminar la fatiga
+    tant mental com física, equilibrant tot l’organisme i
+    alliberant els bloquejos que el pacient pateix.
+    Cada sessió de massatge és individualitzada, i
+    s’adapta tant a la constitució del pacient com als
+    desequilibris d’aquest.
+    El massatge es complementa amb olis i
+    moviments, que activen el sistema limfàtic i
+    estimulen la capacitat del cos per eliminar toxines i
+    d’aquesta manera ajudar-lo a recuperar la salut.</p>
+      <p class="lead text-center">Em dic Maria Burata, sóc diplomada en enginyeria
+    però la meva vocació era més terapèutica.
+    Gràcies a la pràctica del ioga vaig començar a
+    prendre conciència del cos i a introduir-me en el
+    món de les teràpies.
+    La formació en massatge Ayurveda m’ha
+    donat el privilegi d’estar en contacte amb l’altre
+    en un aprenentatge constant del tractaments
+    energètics i físics.
+    Actualment m’estic formant com a osteòpata que
+    m’ofereix una visió més precisa del coneixement
+    anatòmico-emocional.</p>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="content">
+    <h1 class="display-4">blog</h1>
+    <ul class="post-list">
+      {% for post in site.posts | limit: 3 %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="contacte">
+  <div class="content">
+    <h1>Vens tu o vinc jo</h1>
+    <p>Segons la teva comoditat podem pactar les visites allà on et sentis més a gust. Al preu de la sessió se li sumarà el cost del transport.</p>
+    <ul>
+      <li>C/ Zamora 109 sobreàtic 1er</li>
+      <li>Barcelona</li>
+      <li>08970</li>
+      <li>L1 Marina | L4 Bogatell</li>
+    </ul>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.957823582889!2d2.1886432!3d41.39672230000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31eb7fd6651%3A0x8c2e7f559af161de!2sCarrer+de+Zamora%2C+109!5e0!3m2!1sca!2ses!4v1442325748870" allowfullscreen></iframe>
+    </div>
+    <p class="lead text-center">Per a qualsevol consulta siusplau, no dubteu en escriure’m.</p>
+    <form class="text-center">
+      <fieldset class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="Nom">
+      </fieldset>
+      <fieldset class="form-group">
+        <input type="email" class="form-control" id="email" placeholder="Mail">
+      </fieldset>
+       <fieldset class="form-group">
+        <textarea class="form-control" id="message" rows="3" placeholder="Missatge"></textarea>
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</section>
