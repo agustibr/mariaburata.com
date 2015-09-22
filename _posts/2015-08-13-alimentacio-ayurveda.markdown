@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "How to use"
+title: "La alimentació Ayurveda"
 date: 2015-08-03 03:32:44
-image: '/assets/img/'
+image: 'post-ayurveda.jpg'
 description: 'First steps to use this template'
 tags:
 - jekyll
@@ -11,6 +11,7 @@ categories:
 - I love Jekyll
 twitter_text: 'How to install and use this template'
 ---
+Some quick example text to build on the card title and make up the bulk of the card's content.
 
 This is a simple and minimalist template for Jekyll designed for developers that want to write blog posts but don't want to care about frontend stuff.
 

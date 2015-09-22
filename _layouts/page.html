@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<div class="post">
+<body class="page">
+{% include header.html %}
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-
-  <article class="post-content">
+  <div class="vertical-center-container container-fluid">
     {{ content }}
-  </article>
+  </div>
 
-</div>
+    {% include footer.html %}
+
+{% include foot.html %}
+</body>

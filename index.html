@@ -1,15 +1,15 @@
 ---
-layout: default
+layout: page
 ---
 <section id="top">
   <div class="content text-center">
     <h1 class="display-4">{{ site.title }}</h1>
   </div>
 </section>
-<section>
+<section id="video">
   <div class="content">
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="//player.vimeo.com/video/52693887?color=F9A995&title=0&byline=0&portrait=0" allowfullscreen></iframe>
+      <iframe class="vimeo-video embed-responsive-item" src="//player.vimeo.com/video/52693887?color=F9A995&title=0&byline=0&portrait=0" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -52,18 +52,21 @@ layout: default
 
 <section id="blog">
   <div class="content">
-    <h1 class="display-4">blog</h1>
-    <ul class="post-list">
-      {% for post in site.posts | limit: 3 %}
-        <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-        </li>
+    <div class="card-group">
+      {% for post in site.posts | limit: 3 %}
+        <div class="card">
+          <img class="card-img-top img-responsive" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }}">
+          <div class="card-block">
+            <h4 class="card-title">{{ post.title }}</h4>
+            <p class="card-text">{{ post.content | truncatewords: 10 }}</p>
+            <p class="card-text"><small>{{ post.date | date: "%b %-d, %Y" | upcase }}</small></p>
+            <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">Read more ></a>
+          </div>
+        </div> <!-- /.card -->
       {% endfor %}
-    </ul>
+    </div> <!-- /.card-group -->
+
   </div>
 </section>
 
