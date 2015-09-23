@@ -31,25 +31,21 @@ layout: default
     </div>
   </article>
 
-  <nav class="vertical-center-">
-    <div class="vertical-center-container">
-      {% if page.previous.url %}
-        <a href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" class="prev vertical-center-row">
-          OLDER
-        </a>
-      {% endif %}
-    </div>
-    <div class="vertical-center-container">
-      {% if page.next.url %}
-        <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}" class="next vertical-center-row">
-          NEWER
-        </a>
-      {% endif %}
-    </div>
+  <nav>
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" class="prev">
+        OLDER
+      </a>
+    {% endif %}
+    {% if page.next.url %}
+      <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}" class="next">
+        NEWER
+      </a>
+    {% endif %}
   </nav>
 
   <footer class="text-center">
-    <a href="{{ site.baseurl | prepend: site.url }}">
+    <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">
         {{ site.title }}
     </a> |
     <a href="{{ "/blog" | prepend: site.baseurl | prepend: site.url }}">

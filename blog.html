@@ -1,0 +1,20 @@
+---
+layout: post
+title: Blog
+permalink: "blog/"
+---
+<br>
+{% for post in site.posts %}
+    <div class="card">
+      <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">
+        <img class="card-img-top img-responsive" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }}">
+      </a>
+      <div class="card-block">
+        <h4 class="card-title">{{ post.title }}</h4>
+        <p class="card-text">{{ post.content | truncatewords: 10 }}</p>
+        <p class="card-text"><small>{{ post.date | date: "%b %-d, %Y" | upcase }}</small></p>
+        <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">Read more ></a>
+      </div>
+    </div> <!-- /.card -->
+{% endfor %}
+

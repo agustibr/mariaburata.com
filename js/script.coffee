@@ -6,6 +6,7 @@ $ ->
 
   container = $('#video')
   iframe = $('.vimeo-video')
+  scrollDown = $('.scroll-down')
   src = iframe.attr('src')
   srcAuto = iframe.attr('src') + "&autoplay=1"
   isPlaying = false
@@ -18,6 +19,7 @@ $ ->
       if !isPlaying
         isPlaying = true
         iframe.attr('src', srcAuto)
+        scrollDown.fadeOut()
     else
       isPlaying = false
     return

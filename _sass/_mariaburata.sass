@@ -1,7 +1,12 @@
+#mfPreviewBar
+  display: none !important
 body.page
   padding-top: $gradient-height
   padding-bottom: $gradient-height
   color: $body-color-page
+  .container-fluid
+    padding-right: 0
+    padding-left: 0
 html,
 body.page ,
 .vertical-center-container
@@ -35,12 +40,20 @@ body.page ,
     opacity: 1
 .modal-content
   border-color: transparent
+.site-title
+  font-size: 4rem
+  font-weight: normal
 
 section
   height: 80vh
   width: 100%
-  border-bottom: 1px solid $color-white
+  border-bottom: 1px solid darken( $color-pink, 2 )
+  padding-right: ($grid-gutter-width / 2)
+  padding-left: ($grid-gutter-width / 2)
   display: table
+  &.no-gutters
+    padding-right: 0
+    padding-left: 0
   .content
     padding-top: $gradient-height
     padding-bottom: $gradient-height
@@ -48,10 +61,11 @@ section
     vertical-align: middle
 .lead
   font-size: 2em
+  text-align: center
   padding-right: 1em
   padding-left: 1em
 .scroll-down
-  font-size: .8em
+  font-size: .65em
   -webkit-transform: rotate(90deg)
   -moz-transform: rotate(90deg)
   -ms-transform: rotate(90deg)
@@ -62,6 +76,31 @@ section
   display: inline-block
   bottom: 110%
   left: 46%
+#content-contact,
+#content-contact p,
+#content-contact li
+  font-size: .8rem
+  line-height: 1.1em
+.embed-responsive
+  margin: 4rem 0
+
+body.page .form-control
+  // padding: $input-padding-y $input-padding-x
+  font-size: $font-size-base * 2
+  // line-height: $line-height
+  text-align: center
+  color: $color-white
+  background-color: $body-bg
+  border: none
+  border-bottom: 1px solid $color-white
+  @include border-radius(0)
+  @include box-shadow($input-box-shadow)
+  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s)
+body.page ::-webkit-input-placeholder,
+body.page :-moz-placeholder,
+body.page ::-moz-placeholder,
+body.page :-ms-input-placeholder
+  color: $color-white
 
 body.post
   header
@@ -85,13 +124,12 @@ body.post
     position: relative
     .next,
     .prev
-      position: absolute
       display: block
       position: fixed
-      top: 0
-      height: 100vh
+      top: 50%
     .next
       right: $spacer-x
     .prev
       left: $spacer-x
-
+  footer
+    color: $color-white

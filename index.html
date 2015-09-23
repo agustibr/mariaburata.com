@@ -3,10 +3,10 @@ layout: page
 ---
 <section id="top">
   <div class="content text-center">
-    <h1 class="display-4">{{ site.title }}</h1>
+    <h1 class="site-title">{{ site.title }}</h1>
   </div>
 </section>
-<section id="video">
+<section id="video" class="no-gutters">
   <div class="content">
     <div class="embed-responsive embed-responsive-16by9">
       <iframe class="vimeo-video embed-responsive-item" src="//player.vimeo.com/video/52693887?color=F9A995&title=0&byline=0&portrait=0" allowfullscreen></iframe>
@@ -14,8 +14,8 @@ layout: page
   </div>
 </section>
 <section id="massatges">
-    <div class="content">
-      <p class="lead text-center">El terme Ayurveda prové del sànscrit, la llengua clàssica de l’hinduisme.
+    <div class="content lead">
+      <p>El terme Ayurveda prové del sànscrit, la llengua clàssica de l’hinduisme.
     És format per la unió de dos mots: ayur, que
     significa “vida” i veda, que vol dir “coneixement”.
     A diferencia d’altres massatges que es centren
@@ -23,7 +23,7 @@ layout: page
     ayurvèdic treballa a tres nivells: físic, emocional
     i energètic, oferint així una profunda sensació de
     relaxació i benestar.</p>
-      <p class="lead text-center">Mitjançant tècniques d’amassament, digito-puntura
+      <p>Mitjançant tècniques d’amassament, digito-puntura
     i fricció es relaxen el sistema circulatori, emocional,
     energètic i muscular; ajudant així a eliminar la fatiga
     tant mental com física, equilibrant tot l’organisme i
@@ -35,7 +35,7 @@ layout: page
     moviments, que activen el sistema limfàtic i
     estimulen la capacitat del cos per eliminar toxines i
     d’aquesta manera ajudar-lo a recuperar la salut.</p>
-      <p class="lead text-center">Em dic Maria Burata, sóc diplomada en enginyeria
+      <p>Em dic Maria Burata, sóc diplomada en enginyeria
     però la meva vocació era més terapèutica.
     Gràcies a la pràctica del ioga vaig començar a
     prendre conciència del cos i a introduir-me en el
@@ -53,37 +53,55 @@ layout: page
 <section id="blog">
   <div class="content">
 
-    <div class="card-group">
-      {% for post in site.posts | limit: 3 %}
-        <div class="card">
-          <img class="card-img-top img-responsive" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }}">
-          <div class="card-block">
-            <h4 class="card-title">{{ post.title }}</h4>
-            <p class="card-text">{{ post.content | truncatewords: 10 }}</p>
-            <p class="card-text"><small>{{ post.date | date: "%b %-d, %Y" | upcase }}</small></p>
-            <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">Read more ></a>
-          </div>
-        </div> <!-- /.card -->
-      {% endfor %}
-    </div> <!-- /.card-group -->
+    <div class="row">
+      <div class="col-md-1">&nbsp;<hr></div>
+      <div class="col-md-10">
+        <div class="row">
+          {% for post in site.posts | limit: 3 %}
+            <div class="col-md-4">
+              <div class="card">
+                <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">
+                  <img class="card-img-top img-responsive" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }}">
+                </a>
+                <div class="card-block">
+                  <h4 class="card-title">{{ post.title }}</h4>
+                  <p class="card-text">{{ post.content | truncatewords: 10 }}</p>
+                  <p class="card-text"><small>{{ post.date | date: "%b %-d, %Y" | upcase }}</small></p>
+                  <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">Read more ></a>
+                </div>
+              </div> <!-- /.card -->
+            </div> <!-- /.col -->
+          {% endfor %}
+        </div> <!-- /.row -->
+      </div> <!-- /.col -->
+      <div class="col-md-1">&nbsp;<hr></div>
+
+    </div> <!-- /.row -->
 
   </div>
 </section>
 
-<section id="contacte">
-  <div class="content">
+<section id="contacte" class="no-gutters">
+  <div class="content text-center">
     <h1>Vens tu o vinc jo</h1>
-    <p>Segons la teva comoditat podem pactar les visites allà on et sentis més a gust. Al preu de la sessió se li sumarà el cost del transport.</p>
-    <ul>
-      <li>C/ Zamora 109 sobreàtic 1er</li>
-      <li>Barcelona</li>
-      <li>08970</li>
-      <li>L1 Marina | L4 Bogatell</li>
-    </ul>
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.957823582889!2d2.1886432!3d41.39672230000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31eb7fd6651%3A0x8c2e7f559af161de!2sCarrer+de+Zamora%2C+109!5e0!3m2!1sca!2ses!4v1442325748870" allowfullscreen></iframe>
+    <div class="row">
+      <div id="content-contact" class="col-md-4 col-md-offset-4">
+        <p>Segons la teva comoditat podem pactar les visites allà on et sentis més a gust. Al preu de la sessió se li sumarà el cost del transport.
+        </p>
+        <ul class="list-unstyled">
+          <li>C/ Zamora 109 sobreàtic 1er</li>
+          <li>Barcelona</li>
+          <li>08970</li>
+          <li>L1 Marina | L4 Bogatell</li>
+        </ul>
+      </div> <!-- /.col -->
+    </div> <!-- /.row -->
+
+    <div class="embed-responsive embed-responsive-21by9">
+      <div id="map" class="embed-responsive-item"></div>
+      <!-- <iframe class="hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.957823582889!2d2.1886432!3d41.39672230000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31eb7fd6651%3A0x8c2e7f559af161de!2sCarrer+de+Zamora%2C+109!5e0!3m2!1sca!2ses!4v1442325748870" allowfullscreen></iframe> -->
     </div>
-    <p class="lead text-center">Per a qualsevol consulta siusplau, no dubteu en escriure’m.</p>
+    <p class="lead text-center">Per a qualsevol consulta siusplau, no dubteu en escriure'm.</p>
     <form class="text-center">
       <fieldset class="form-group">
         <input type="text" class="form-control" id="name" placeholder="Nom">
@@ -92,9 +110,9 @@ layout: page
         <input type="email" class="form-control" id="email" placeholder="Mail">
       </fieldset>
        <fieldset class="form-group">
-        <textarea class="form-control" id="message" rows="3" placeholder="Missatge"></textarea>
+        <textarea class="form-control" id="message" rows="2" placeholder="Missatge"></textarea>
       </fieldset>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary btn-sm">ENVIAR</button>
     </form>
   </div>
 </section>
