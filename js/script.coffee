@@ -2,7 +2,7 @@
 ---
 $ ->
   $("#mb-nav a").click ->
-    $('#mb-menu-modal').modal('hide')
+    $('#collapseMenu').collapse('hide')
 
   container = $('#video')
   iframe = $('.vimeo-video')

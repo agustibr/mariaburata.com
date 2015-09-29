@@ -1,43 +1,43 @@
-<nav class="navbar navbar-fixed-top grad-top text-center">
-  <button type="button" class="btn btn-primary-outline btn-sm btn-menu-trigger" data-toggle="modal" data-target="#mb-menu-modal">MENU</button>
-</nav>
-<!-- Large modal -->
-
-<div id="mb-menu-modal" class="modal modal-fullscreen fade" tabindex="-1" role="dialog" aria-labelledby="MENU" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="text-center">
-        <button type="button" class="btn btn-primary-outline btn-sm btn-menu-close" data-dismiss="modal" aria-label="Close">
-          TANCA
-        </button>
-      </div>
-      <ul id="mb-nav" class="nav nav-pills nav-stacked text-center">
-        <li class="nav-item">
-          <a href="#massatge" class="nav-link">Massatge</a>
-        </li>
-        <li class="nav-item">
-          <a href="#blog" class="nav-link">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contacte" class="nav-link">Contacte</a>
-        </li>
-      </ul>
+<div class="collapse fade" id="collapseMenu">
+  <div class="card card-block">
+    <div class="text-center">
+        <button
+          class="btn btn-primary-outline btn-sm btn-menu-close"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseMenu"
+          aria-expanded="false"
+          aria-controls="collapseMenu"
+          aria-label="Close">
+        TANCA
+      </button>
     </div>
+    <section>
+      <div class="content">
+        <ul id="mb-nav" class="nav nav-pills nav-stacked text-center">
+          <li class="nav-item">
+            <a href="{{ "/#massatge" | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Massatge</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ "/#blog" | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ "/#contacte" | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Contacte</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 </div>
-<!--
-<header class="site-header">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-    <nav class="site-nav">
-
-
-    </nav>
-
-  </div>
-
-</header>
--->
+<nav class="navbar navbar-fixed-top grad-top text-center">
+  <!-- <button type="button" class="btn btn-primary-outline btn-sm btn-menu-trigger" data-toggle="modal" data-target="#mb-menu-modal">MENU</button> -->
+  <button
+    class="btn btn-primary-outline btn-sm btn-menu-trigger"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapseMenu"
+    aria-expanded="false"
+    aria-controls="collapseMenu">
+    MENU
+  </button>
+</nav>

@@ -45,7 +45,7 @@ body.page ,
   font-weight: normal
 
 section
-  height: 80vh
+  height: $viewport-height
   width: 100%
   border-bottom: 1px solid darken( $color-pink, 2 )
   padding-right: ($grid-gutter-width / 2)
@@ -54,6 +54,9 @@ section
   &.no-gutters
     padding-right: 0
     padding-left: 0
+    .row
+      margin-left: 0
+      margin-right: 0
   .content
     padding-top: $gradient-height
     padding-bottom: $gradient-height
