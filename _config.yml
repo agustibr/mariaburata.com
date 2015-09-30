@@ -1,15 +1,17 @@
 # Site settings
 title: Maria Burata
-email: your-email@domain.com
+email: info@mariaburata.com
 description: > # this means to ignore newlines until "baseurl:"
   Em dic Maria Burata. La formació en massatge Ayurveda m’ha donat
   el privilegi d’estar en contacte amb l’altre en un aprenentatge
   constant del tractaments energètics i físics. Actualment m’estic
   formant com a osteòpata
 baseurl: "/mariaburata.com" # the subpath of your site, e.g. /blog/
-url: "http://www.agusti.cat" #"http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://www.agustibelloc.net" #"http://yourdomain.com" # the base hostname & protocol for your site
 
 
 # Build settings
 markdown: kramdown
 permalink: /blog/:title
+sass:
+    style: :compressed
