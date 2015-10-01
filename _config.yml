@@ -15,3 +15,4 @@ markdown: kramdown
 permalink: /blog/:title
 sass:
     style: :compressed
+exclude: ['_prose.yml','.editorconfig','.gitignore']

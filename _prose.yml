@@ -1,0 +1,40 @@
+
+prose:
+  # siteurl: "http://domain-name.com" # Turns on Jekyll live previews. The url is the homepage of the live site.
+  ignore: ['_includes', '_layouts', '_sass', 'css', 'js', 'CNAME', '.gitignore', '.editorconfig', '.DS_Store', '404.html','CNAME', '_config.yml', 'feed.xml', 'about.md', 'blog.html','index.html']
+  media: 'images'
+  relativeLinks: "absolute-url.jsonp"
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Titol del post"
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Categories"
+          help: "classificació del post"
+          alterable: true,
+          options:
+            - name: 'ayurveda'
+              value: 'ayurveda'
+            - name: 'novetat'
+              value: 'novetat'
+      - name: "image"
+        field:
+          element: "text"
+          label: "Thumbnail del post"
+          help: "posa l'arxiu d'imatge (imatge.png)"
+          placeholder: "imatge.png"
+          type: text
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "Descripció de la pàgina"
+          help: "serveix per al google, quan busquin"
+          placeholder: "Descriu amb una frase (o dos) els continguts de la pàgina"
