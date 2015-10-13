@@ -1,14 +1,18 @@
 #mfPreviewBar
   display: none !important
-body.page
+
+body.page,
+body.temp
   padding-top: $gradient-height
   padding-bottom: $gradient-height
   color: $body-color-page
   .container-fluid
     padding-right: 0
     padding-left: 0
+
 html,
-body.page ,
+body.page,
+body.temp,
 .vertical-center-container
   height: 100%
 
@@ -104,35 +108,3 @@ body.page :-moz-placeholder,
 body.page ::-moz-placeholder,
 body.page :-ms-input-placeholder
   color: $color-white
-
-body.post
-  header
-    background: $color-pink
-    text-align: center
-    color: $color-white
-    padding-top: $spacer-y * 2
-    padding-bottom: $spacer-y * 2
-    h1
-      font-weight: normal
-      text-transform: uppercase
-    p
-      margin-bottom: 0
-  article
-    background: $color-white
-    color: $body-color-post
-    .post-image
-      margin-top: $spacer-y
-      margin-bottom: $spacer-y
-  nav
-    position: relative
-    .next,
-    .prev
-      display: block
-      position: fixed
-      top: 50%
-    .next
-      right: $spacer-x
-    .prev
-      left: $spacer-x
-  footer
-    color: $color-white
