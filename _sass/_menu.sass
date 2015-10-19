@@ -1,3 +1,21 @@
+.btn-menu-trigger,
+.btn-menu-close
+  color: $color-pink
+  border-color: transparent
+  &:hover,
+  &:focus,
+  &:active
+    color: lighten($color-pink, 5)
+    background-color: transparent
+    border-color: transparent
+
+.modal-backdrop
+  background-color: $color-white
+  &.in
+    opacity: 1
+.modal-content
+  border-color: transparent
+
 #collapseMenu
   background: $color-white
   position: fixed
@@ -9,8 +27,15 @@
   section
     margin-top: $gradient-height / 2
     border-bottom: none
+    .content
+      padding-top: 15vh
   .nav-link
     font-size: 2rem
     padding: .1em 1em
+    &.active,
+    &:hover
+      color: lighten($color-pink, 5)
+      background-color: transparent
+      border-color: transparent
 .fade.in
   transition: opacity .15s linear

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<body class="blog">
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <h1>{{ page.title | upcase }}</h1>
+        <p>
+          <small>
+          {% if page.categories %}{{ page.categories | array_to_sentence_string }} | {% endif %}
+          {{ page.date | date: "%d %b %Y" }}
+          </small>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-left">
+        <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">{{ site.title | upcase }}</a>
+      </div>
+    </div>
+  </header>
+  <article class="container-fluid">
+    <div class="col-md-1">&nbsp;</div>
+    <div class="col-md-10">
+      <div class="row">
+        {{ content }}
+      </div> <!-- /.row -->
+    </div> <!-- /.col -->
+    <div class="col-md-1">&nbsp;</div>
+  </article>
+
+</body>

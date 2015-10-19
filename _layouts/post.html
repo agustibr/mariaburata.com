@@ -14,6 +14,14 @@ layout: default
         </p>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-4 text-left">
+        <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">{{ site.title | upcase }}</a>
+      </div>
+      <div class="col-md-4">&nbsp;</div>
+      <div class="col-md-4 text-right">
+        <a href="{{ "/blog" | prepend: site.baseurl | prepend: site.url }}">{{ "Totes les entrades" | upcase }}</a>
+      </div>
   </header>
   <article class="container-fluid">
     <div class="row">
@@ -43,14 +51,5 @@ layout: default
       </a>
     {% endif %}
   </nav>
-
-  <footer class="text-center">
-    <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">
-        {{ site.title }}
-    </a> |
-    <a href="{{ "/blog" | prepend: site.baseurl | prepend: site.url }}">
-      Blog
-    </a>
-  </footer>
 
 </body>

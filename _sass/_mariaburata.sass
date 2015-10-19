@@ -3,8 +3,11 @@
 
 // Type Rendering Mix JS adds .tr-coretext when
 .tr-coretext
+  -webkit-font-smoothing: antialiased
   font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+body
+  letter-spacing: 0.05em
 
 body.page,
 body.temp
@@ -40,15 +43,6 @@ body.temp,
   background: linear-gradient(to bottom, rgba($color-white, 0), $color-white)
   border-bottom: 1em solid $color-white
 
-.btn-menu-trigger
-  color: $color-pink
-  border-color: transparent
-.modal-backdrop
-  background-color: $color-white
-  &.in
-    opacity: 1
-.modal-content
-  border-color: transparent
 .site-title
   font-size: 4rem
   font-weight: normal
@@ -74,8 +68,12 @@ section
 .lead
   font-size: 2em
   text-align: center
-  padding-right: 1em
-  padding-left: 1em
+  padding-right: 2em
+  padding-left: 2em
+  h1,
+  p
+    margin-bottom: 1.5rem
+    line-height: 1.2
 .scroll-down
   font-size: .65em
   -webkit-transform: rotate(90deg)
