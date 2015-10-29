@@ -1,3 +1,5 @@
+{% assign landing-link = site.pages | where:"sibling", "landing" | where:"lang", page.lang %}
+
 <div class="collapse fade" id="collapseMenu">
   <div class="card card-block">
     <div class="text-center">
@@ -9,24 +11,23 @@
           aria-expanded="false"
           aria-controls="collapseMenu"
           aria-label="Close">
-        TANCA
+          {{ site.data.locale["close"][page.lang] }}
       </button>
     </div>
     <section>
       <div class="content">
         <ul id="mb-nav" class="nav nav-pills nav-stacked text-center">
           <li class="nav-item">
-            <a href="{{ "/#massatge" | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Massatge</a>
+            <a href="{{ "#massatge" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Massatge</a>
           </li>
           <li class="nav-item">
-            <a href="{{ "/#blog" | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Blog</a>
+            <a href="{{ "#blog" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Blog</a>
           </li>
           <li class="nav-item">
-            <a href="{{ "/#contacte" | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Contacte</a>
+            <a href="{{ "#contacte" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">{{ site.data.locale["contact"][page.lang] }}</a>
           </li>
           <li>&nbsp;</li><li>&nbsp;</li>
-          <li class="nav-item"><a href="#" class="nav-link active">català</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">castellano</a></li>
+          {% include lang-switcher.html %}
         </ul>
       </div>
     </section>
@@ -57,6 +58,6 @@
     data-target="#collapseMenu"
     aria-expanded="false"
     aria-controls="collapseMenu">
-    MENU
+    {{ site.data.locale["menu"][page.lang] }}
   </button>
 </nav>

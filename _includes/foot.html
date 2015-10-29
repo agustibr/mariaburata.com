@@ -5,11 +5,10 @@
 <script src="{{ "/js/trmix.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 
 <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+
+{% if page.sibling == "landing" %}
 <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="{{ "/js/script.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
 <script type="text/javascript">
     // When the window has finished loading create our google map below
     google.maps.event.addDomListener(window, 'load', init);
@@ -43,3 +42,5 @@
         });
     }
 </script>
+{% endif %}
+<script src="{{ "/js/script.js" | prepend: site.baseurl | prepend: site.url }}"></script>

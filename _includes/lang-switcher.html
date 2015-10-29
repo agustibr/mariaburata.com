@@ -1,0 +1,7 @@
+{% assign translations = site.pages | where:"sibling", page.sibling | sort: 'lang-order' %}
+
+{% for translation in translations %}
+  <li class="nav-item">
+    <a href="{{ translation.url | prepend: site.baseurl | prepend: site.url }}" class="nav-link {{ translation.lang }}">{{ translation.lang-name }}</a>
+  </li>
+{% endfor %}

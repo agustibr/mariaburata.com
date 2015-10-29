@@ -1,0 +1,57 @@
+menu:
+  cat: "MENÚ"
+  es: "MENÚ"
+
+close:
+  cat: "TANCA"
+  es: "CERRAR"
+
+contact:
+  cat: "Contacte"
+  es: "Contacto"
+
+massage:
+  cat: Massatge
+  es: Masaje
+
+blog:
+  cat: Blog
+  es: Blog
+
+read-more:
+  cat: "LLEGIR MÉS"
+  es: "LEER MÁS"
+
+and:
+  cat: " i "
+  es: " y "
+all-posts:
+  cat: TOTES LES ENTRADES
+  es: TODAS LAS ENTRADAS
+months:
+  cat:
+    - GENER
+    - FEBRER
+    - MARÇ
+    - ABRIL
+    - MAIG
+    - JUNY
+    - JULIOL
+    - AGOST
+    - SETEMBRE
+    - OCTUBRE
+    - NOVEMBRE
+    - DESEMBRE
+  es:
+    - ENERO
+    - FEBRERO
+    - MARZO
+    - ABRIL
+    - MAYO
+    - JUNIO
+    - JULIO
+    - AGOSTO
+    - SEPTIEMBRE
+    - OCTUBRE
+    - NOVIEMBRE
+    - DICIEMBRE

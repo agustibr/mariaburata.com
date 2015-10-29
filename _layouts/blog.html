@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign landing-link = site.pages | where:"sibling", "landing" | where:"lang", page.lang %}
+
 <body class="blog">
   <header class="container-fluid">
     <div class="row">
@@ -16,7 +18,7 @@ layout: default
     </div>
     <div class="row">
       <div class="col-md-4 text-left">
-        <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">{{ site.title | upcase }}</a>
+        <a href="{{ landing-link[0].url | prepend: site.baseurl | prepend: site.url }}">{{ site.title | upcase }}</a>
       </div>
     </div>
   </header>
@@ -24,7 +26,23 @@ layout: default
     <div class="col-md-1">&nbsp;</div>
     <div class="col-md-10">
       <div class="row">
-        {{ content }}
+        <br>
+        {% assign postsInLang = (site.posts | where: "lang" , page.lang) %}
+        {% for post in postsInLang %}
+          <div class="col-md-4">
+            <div class="card">
+              <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">
+                <img class="card-img-top img-responsive" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }}">
+              </a>
+              <div class="card-block">
+                <h4 class="card-title">{{ post.title }}</h4>
+                <div class="card-text">{{ post.content | truncatewords: 10 }}</div>
+                <p class="card-text"><small>{{ post.date | date: "%b %-d, %Y" | upcase }}</small></p>
+                <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">Read more ></a>
+              </div>
+            </div> <!-- /.card -->
+          </div>
+        {% endfor %}
       </div> <!-- /.row -->
     </div> <!-- /.col -->
     <div class="col-md-1">&nbsp;</div>

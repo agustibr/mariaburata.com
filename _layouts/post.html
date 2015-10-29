@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{% assign landing-link = site.pages | where:"sibling", "landing" | where:"lang", page.lang %}
+{% assign blog-link = site.pages | where:"sibling", "blog" | where:"lang", page.lang %}
+
 <body class="post">
   <header class="container-fluid">
     <div class="row">
@@ -8,7 +11,7 @@ layout: default
         <h1>{{ page.title }}</h1>
         <p>
           <small>
-          {% if page.categories %}{{ page.categories | array_to_sentence_string }} | {% endif %}
+          {% if page.categories %}{{ page.categories | array_to_sentence_string | replace: ', and ', site.data.locale["and"][page.lang] }} | {% endif %}
           {{ page.date | date: "%d %b %Y" }}
           </small>
         </p>
@@ -16,11 +19,11 @@ layout: default
     </div>
     <div class="row">
       <div class="col-md-4 text-left">
-        <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">{{ site.title | upcase }}</a>
+        <a href="{{ landing-link[0].url | prepend: site.baseurl | prepend: site.url }}">{{ site.title | upcase }}</a>
       </div>
       <div class="col-md-4">&nbsp;</div>
       <div class="col-md-4 text-right">
-        <a href="{{ "/blog" | prepend: site.baseurl | prepend: site.url }}">{{ "Totes les entrades" | upcase }}</a>
+        <a href="{{ blog-link[0].url | prepend: site.baseurl | prepend: site.url }}">{{ site.data.locale["all-posts"][page.lang] }}</a>
       </div>
   </header>
   <article class="container-fluid">
@@ -40,6 +43,13 @@ layout: default
   </article>
 
   <nav>
+  <!-- TODO: next/prev post in lang-->
+    {% for post in site.categories[page.lang] %}
+      {% if post.title == page.title %}
+        <h1>{{ post.title }} {{forloop.index0}} {{site.categories[page.lang][forloop.index0].title}}</h1>
+      {% endif %}
+    {% endfor %}
+
     {% if page.previous.url %}
       <a href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" class="prev">
         <svg><use xlink:href="{{ "/svg/icons.svg#svg-arrow" | prepend: site.baseurl | prepend:site.url }}"></use></svg>

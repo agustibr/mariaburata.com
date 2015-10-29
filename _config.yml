@@ -16,3 +16,42 @@ permalink: /blog/:title
 sass:
     style: :compressed
 exclude: ['_prose.yml','.editorconfig','.gitignore']
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+      lang: cat
+      lang-name: "català"
+      lang-order: 1
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      lang: cat
+      lang-name: "català"
+      lang-order: 2
+      permalink: /blog/:title
+  -
+    scope:
+      path: es
+      type: "pages"
+    values:
+      layout: page
+      lang: es
+      lang-name: "castellano"
+      lang-order: 2
+  -
+    scope:
+      path: es
+      type: "posts"
+    values:
+      layout: post
+      lang: es
+      lang-name: "castellano"
+      lang-order: 2
+      permalink: /es/blog/:title

@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: test/
+sibling: test
+---
+page.lang : {{page.lang}} <br><hr>
+*{{trans}}*
+<hr>
+> site.data.locale.close.[page.lang] : {{ site.data.locale.close.[page.lang] }}
+<br>
+- {{site.data.locale }} -
+<br>
+- {{site.data.lang }} -
+
+<hr><hr>
+site.data.lang.close : {{ site.data.lang.close }}
+<hr>
+site.data.lang.close[0]["es"] : {{ site.data.lang.close[0]["es"] }}
+<hr>
+site.data.lang.close[0][page.lang] : {{ site.data.lang.close[0][page.lang] }}
+<hr>
+<pre>
+{{ site.data.lang.close }}
+</pre>
