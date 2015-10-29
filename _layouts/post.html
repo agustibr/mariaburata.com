@@ -42,12 +42,12 @@ layout: default
   <nav>
     {% if page.previous.url %}
       <a href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" class="prev">
-        OLDER
+        <svg><use xlink:href="{{ "/svg/icons.svg#svg-arrow" | prepend: site.baseurl | prepend:site.url }}"></use></svg>
       </a>
     {% endif %}
     {% if page.next.url %}
       <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}" class="next">
-        NEWER
+        <svg><use xlink:href="{{ "/svg/icons.svg#svg-arrow" | prepend: site.baseurl | prepend:site.url }}"></use></svg>
       </a>
     {% endif %}
   </nav>

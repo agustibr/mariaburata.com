@@ -75,17 +75,26 @@ section
     margin-bottom: 1.5rem
     line-height: 1.2
 .scroll-down
-  font-size: .65em
-  -webkit-transform: rotate(90deg)
-  -moz-transform: rotate(90deg)
-  -ms-transform: rotate(90deg)
-  -o-transform: rotate(90deg)
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
-  transform: rotate(90deg)
+  // font-size: .65em
+  // -webkit-transform: rotate(90deg)
+  // -moz-transform: rotate(90deg)
+  // -ms-transform: rotate(90deg)
+  // -o-transform: rotate(90deg)
+  // filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+  // transform: rotate(90deg)
   position: absolute
   display: inline-block
-  bottom: 110%
-  left: 46%
+  bottom: 3em
+  left: 0
+  right: 0
+  color: $color-white
+  text-align: center
+  svg
+    display: inline-block
+    fill: currentColor!important
+    height: 6em
+    width: 6em
+    vertical-align: middle
 #content-contact,
 #content-contact p,
 #content-contact li

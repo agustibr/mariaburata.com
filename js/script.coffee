@@ -18,7 +18,7 @@ $ ->
     if elementFromTop > 0 and elementFromTop < elementPosTop + viewportHeight
       if !isPlaying
         isPlaying = true
-        iframe.attr('src', srcAuto)
+        # iframe.attr('src', srcAuto)
         scrollDown.fadeOut()
     else
       isPlaying = false

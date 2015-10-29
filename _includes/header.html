@@ -30,15 +30,26 @@
         </ul>
       </div>
     </section>
-    <ul class="list-inline text-center">
-      <li><a href="#">Fb</a></li>
-      <li><a href="#">Tw</a></li>
-      <li><a href="#">In</a></li>
+    <ul class="social-list list-inline text-center">
+      <li>
+        <a href="#">
+          <svg><use xlink:href="{{ "/svg/icons.svg#svg-facebook" | prepend: site.baseurl | prepend:site.url }}"></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <svg><use xlink:href="{{ "/svg/icons.svg#svg-twitter" | prepend: site.baseurl | prepend:site.url }}"></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <svg><use xlink:href="{{ "/svg/icons.svg#svg-instagram" | prepend: site.baseurl | prepend:site.url }}"></use></svg>
+        </a>
+      </li>
     </ul>
   </div>
 </div>
 <nav class="navbar navbar-fixed-top grad-top text-center">
-  <!-- <button type="button" class="btn btn-primary-outline btn-sm btn-menu-trigger" data-toggle="modal" data-target="#mb-menu-modal">MENU</button> -->
   <button
     class="btn btn-primary-outline btn-sm btn-menu-trigger"
     type="button"
