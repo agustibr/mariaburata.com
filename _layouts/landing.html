@@ -1,9 +1,10 @@
 ---
 layout: page
+bodyClass: landing
 ---
 <section id="top">
   <div class="content text-center">
-    <h1 class="site-title">{{ site.title }}</h1>
+    <h1 class="site-title">{{ site.data.site.name }}</h1>
   </div>
 </section>
 <section id="video" class="no-gutters">
@@ -31,19 +32,13 @@ layout: page
           {% for post in postsInLang | limit: 3 %}
             <div class="col-md-4">
               <div class="card">
-                <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">
-                  <img class="card-img-top img-responsive" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }}">
+                <a class="card-img-blog" href="{{ post.url | prepend:site.baseurl | prepend: site.url}}" style="background-image: url({{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}});">
                 </a>
                 <div class="card-block">
                   <h4 class="card-title">{{ post.title }}</h4>
                   <p class="card-text">{{ post.content | strip_html | truncatewords: 10 }}</p>
                   <p class="card-text">
-                    {% assign months = site.data.locale["months"][page.lang] %}
-                    {% assign m = post.date | date: "%-m" | minus: 1 %}
-                    {% assign day = post.date | date: "%d" %}
-                    {% assign month = months[m] %}
-                    {% assign year = post.date | date: "%Y" %}
-                    <span class="date">{{ day }} DE {{ month }} DE {{ year }}</span>
+                    {% include helper-date.html date=post.date lang=post.lang %}
                   </p>
                   <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}" class="read-more">{{ site.data.locale["read-more"][page.lang] }} &gt;</a>
                 </div>
@@ -66,9 +61,10 @@ layout: page
     <div class="row">
       <div id="content-contact" class="col-md-4 col-md-offset-4">
         <p>{{ page.contact.text }}</p>
+
         <ul class="list-unstyled">
-          {% for addr in page.address %}
-            <li>{{ addr }}
+          {% for addr in page.contact.address %}
+            <li>{{ addr }}</li>
           {% endfor %}
         </ul>
       </div> <!-- /.col -->
@@ -86,9 +82,10 @@ layout: page
         <input type="email" class="form-control" id="email" placeholder="{{page.form.mail}}">
       </fieldset>
        <fieldset class="form-group">
-        <textarea class="form-control" id="message" rows="2" placeholder="{{page.form.sms}}"></textarea>
+        <textarea class="form-control" id="message" rows="2" placeholder="{{page.form.sms}}" contenteditable></textarea>
       </fieldset>
       <button type="submit" class="btn btn-primary btn-sm">{{page.form.send}}</button>
     </form>
   </div>
 </section>
+<section id="bottom"></section>
