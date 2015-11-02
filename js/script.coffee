@@ -2,7 +2,7 @@
 ---
 $ ->
   getScroll()
-  # autosize $('textarea')
+  autosize $('textarea')
   $("#mb-nav a").click ->
     $('#collapseMenu').collapse('hide')
     getScroll()
