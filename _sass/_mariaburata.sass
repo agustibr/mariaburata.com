@@ -6,8 +6,10 @@
   -webkit-font-smoothing: antialiased
   font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
 body
   letter-spacing: 0.05em
+  font-weight: $base-font-weight
 
 body.page,
 body.temp
@@ -32,7 +34,6 @@ body.temp,
   display: table-cell
   vertical-align: middle
 
-
 .grad-top
   height: $gradient-height
   background: linear-gradient(to top, rgba($color-white, 0), $color-white)
@@ -43,14 +44,21 @@ body.temp,
   background: linear-gradient(to bottom, rgba($color-white, 0), $color-white)
   border-bottom: 1em solid $color-white
 
-.site-title
-  font-size: 4rem
-  font-weight: normal
+.fz-txt
+  font-size: $fz-txt
+  font-weight: $base-font-weight
+.fz-lg
+  font-size: $fz-lg
+  font-weight: $base-font-weight
+.fz-sm
+  font-size: $fz-sm
+  font-weight: $base-font-weight
+  letter-spacing: -0.01em
+  line-height: 1.1em
 
 section
   height: $viewport-height
   width: 100%
-  border-bottom: 1px solid darken( $color-pink, 2 )
   padding-right: ($grid-gutter-width / 2)
   padding-left: ($grid-gutter-width / 2)
   display: table
@@ -61,21 +69,11 @@ section
       margin-left: 0
       margin-right: 0
   .content
-    padding-top: $gradient-height
-    padding-bottom: $gradient-height
+    padding-top: ($gradient-height / 2)
+    padding-bottom: ($gradient-height / 2)
     display: table-cell
     vertical-align: middle
-.read-more
-  color: $color-white
-.lead
-  font-size: 2em
-  text-align: center
-  padding-right: 2em
-  padding-left: 2em
-  h1,
-  p
-    margin-bottom: 1.5rem
-    line-height: 1.2
+
 .scroll-down
   // font-size: .65em
   // -webkit-transform: rotate(90deg)
@@ -97,36 +95,3 @@ section
     height: 6em
     width: 6em
     vertical-align: middle
-#content-contact,
-#content-contact p,
-#content-contact li
-  font-size: .8rem
-  line-height: 1.1em
-.embed-responsive
-  margin: 4rem 0
-body.page form
-  margin-bottom: 2em
-body.page .form-control
-  // padding: $input-padding-y $input-padding-x
-  font-size: $font-size-base * 2
-  // line-height: $line-height
-  text-align: center
-  color: $color-white
-  background-color: $body-bg
-  border: none
-  border-bottom: 1px solid $color-white
-  @include border-radius(0)
-  @include box-shadow($input-box-shadow)
-  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s)
-body.page ::-webkit-input-placeholder,
-body.page :-moz-placeholder,
-body.page ::-moz-placeholder,
-body.page :-ms-input-placeholder
-  color: $color-white
-.credits
-  width: 100%
-  text-align: center
-  color: $color-pink
-  position: absolute
-  bottom: 0
-  font-size: 80%

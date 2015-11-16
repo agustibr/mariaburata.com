@@ -6,7 +6,7 @@ $ ->
   $("#mb-nav a").click ->
     $('#collapseMenu').collapse('hide')
     getScroll()
-
+  ###
   $(window).on 'scroll', ->
     elementPosFromTop = $("#bottom").position().top
     elementHeight = $('#bottom').innerHeight()
@@ -17,7 +17,7 @@ $ ->
     else
       $('.credits').fadeOut('fast')
     getScroll()
-
+  ###
 
 getScroll = ->
   container = $('#video')

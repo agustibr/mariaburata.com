@@ -4,7 +4,7 @@
   <div class="card card-block">
     <div class="text-center">
         <button
-          class="btn btn-primary-outline btn-sm btn-menu-close"
+          class="btn btn-primary-outline btn-menu-close"
           type="button"
           data-toggle="collapse"
           data-target="#collapseMenu"
@@ -18,13 +18,19 @@
       <div class="content">
         <ul id="mb-nav" class="nav nav-pills nav-stacked text-center">
           <li class="nav-item">
-            <a href="{{ "#massage" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Massatge</a>
+            <a href="{{ "#massage" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">{{ site.data.locale["massage"][page.lang] }}</a>
           </li>
           <li class="nav-item">
-            <a href="{{ "#blog" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">Blog</a>
+            <a href="{{ "#about" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">{{ site.data.locale["about"][page.lang] }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ "#gift" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">{{ site.data.locale["gift"][page.lang] }}</a>
           </li>
           <li class="nav-item">
             <a href="{{ "#contact" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">{{ site.data.locale["contact"][page.lang] }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ "#blog" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">{{ site.data.locale["blog"][page.lang] }}</a>
           </li>
           <li>&nbsp;</li><li>&nbsp;</li>
           {% include lang-switcher.html %}
@@ -52,7 +58,7 @@
 </div>
 <nav class="navbar navbar-fixed-top grad-top text-center">
   <button
-    class="btn btn-primary-outline btn-sm btn-menu-trigger"
+    class="btn btn-primary-outline btn-menu-trigger"
     type="button"
     data-toggle="collapse"
     data-target="#collapseMenu"

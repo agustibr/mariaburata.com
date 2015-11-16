@@ -2,6 +2,6 @@
 
 {% for translation in translations %}
   <li class="nav-item">
-    <a href="{{ translation.url | prepend: site.baseurl | prepend: site.url }}" class="nav-link {{ translation.lang }}">{{ translation.lang-name }}</a>
+    <a href="{{ translation.url | prepend: site.baseurl | prepend: site.url }}" class="nav-link {{ translation.lang }} {% if page.lang == translation.lang %} active {% endif %}">{{ translation.lang-name }}</a>
   </li>
 {% endfor %}

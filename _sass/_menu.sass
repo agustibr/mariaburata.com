@@ -2,12 +2,16 @@
 .btn-menu-close
   color: $color-pink
   border-color: transparent
+  @extend .fz-sm
   &:hover,
   &:focus,
   &:active
     color: lighten($color-pink, 5)
     background-color: transparent
     border-color: transparent
+    outline: none !important
+  &:focus
+    color: $color-white
 
 .modal-backdrop
   background-color: $color-white
@@ -30,11 +34,13 @@
     .content
       padding-top: 15vh
   .nav-link
-    font-size: 2rem
-    padding: .1em 1em
+    @extend .fz-lg
+    color: $color-pink
+    padding: .2em 3em
+    line-height: .8em
     &.active,
     &:hover
-      color: lighten($color-pink, 5)
+      color: lighten($color-pink, 10)
       background-color: transparent
       border-color: transparent
 .fade.in
@@ -51,8 +57,3 @@
     height: 1.5rem
     width: 1.5rem
     vertical-align: middle
-.es:lang(es),
-.cat:lang(cat)
-  color: lighten($color-pink, 5)
-  background-color: transparent
-  border-color: transparent

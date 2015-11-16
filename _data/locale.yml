@@ -14,6 +14,43 @@ massage:
   cat: Massatge
   es: Masaje
 
+prices:
+  cat: Preus
+  es: Precios
+  unit:
+    local:
+      cat: "Massatge de [[min]] min. [[eur]]."
+      es: "Masaje de [[min]] min. [[eur]]."
+    home:
+      cat: "Massatge [[min]] min. a domicili [[eur]]."
+      es: "Masaje [[min]] min. a domicilio [[eur]]."
+  pack3:
+    local:
+      title:
+        cat: "3 massatges mensuals:"
+        es: "3 masajes mensuales:"
+      txt:
+        cat: "[[min]] min./mes [[eur]] eur."
+        es: "[[min]] min./mes [[eur]] eur."
+    home:
+      title:
+        cat: "3 massatges mensuals a domicili:"
+        es: "3 masajes mensuales a domicilio:"
+      txt:
+        cat: "[[min]] min./mes [[eur]] eur."
+        es: "[[min]] min./mes [[eur]] eur."
+    note:
+      cat: "(no acumulables d’un mes a un altre)"
+      es: "(no acumulables de un mes a otro)"
+
+about:
+  cat: "Qui sóc?"
+  es: "Quién soy?"
+
+gift:
+  cat: Regala
+  es: Regala
+
 blog:
   cat: Blog
   es: Blog
@@ -25,33 +62,39 @@ read-more:
 and:
   cat: " i "
   es: " y "
+
+landing:
+  cat: inici
+  es: inicio
+
 all-posts:
   cat: TOTES LES ENTRADES
   es: TODAS LAS ENTRADAS
+
 months:
   cat:
-    - GENER
-    - FEBRER
-    - MARÇ
-    - ABRIL
-    - MAIG
-    - JUNY
-    - JULIOL
-    - AGOST
-    - SETEMBRE
-    - OCTUBRE
-    - NOVEMBRE
-    - DESEMBRE
+    - gener
+    - febrer
+    - març
+    - abril
+    - maig
+    - juny
+    - juliol
+    - agost
+    - setembre
+    - octubre
+    - novembre
+    - desembre
   es:
-    - ENERO
-    - FEBRERO
-    - MARZO
-    - ABRIL
-    - MAYO
-    - JUNIO
-    - JULIO
-    - AGOSTO
-    - SEPTIEMBRE
-    - OCTUBRE
-    - NOVIEMBRE
-    - DICIEMBRE
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre

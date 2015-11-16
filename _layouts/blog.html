@@ -18,7 +18,9 @@ layout: default
     </div>
     <div class="row">
       <div class="col-md-4 text-left">
-        <a href="{{ landing-link[0].url | prepend: site.baseurl | prepend: site.url }}">{{ site.title | upcase }}</a>
+        <a href="{{ landing-link[0].url | prepend: site.baseurl | prepend: site.url }}">
+          {{ site.data.locale["landing"][page.lang] | upcase }}
+        </a>
       </div>
     </div>
   </header>
@@ -30,21 +32,17 @@ layout: default
         {% assign postsInLang = (site.posts | where: "lang" , page.lang) %}
         {% for post in postsInLang %}
           <div class="col-md-4">
-            <div class="card">
-              {% if post.image %}
-                <a class="card-img-blog" href="{{ post.url | prepend:site.baseurl | prepend: site.url}}" style="background-image: url({{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}});">
-                </a>
-              {% endif %}
+            <a class="card" href="{{ post.url | prepend:site.baseurl | prepend: site.url}}" >
+              <div class="card-img-blog">
+                <img class="" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }} image"/>
+              </div>
               <div class="card-block">
                 <h4 class="card-title">{{ post.title }}</h4>
-                <div class="card-text">{{ post.content | strip_html | truncatewords: 10 }}</div>
-                <p class="card-text">
-                  {% include helper-date.html date=post.date lang=post.lang %}
-                </p>
-                <a href="{{ post.url | prepend:site.baseurl | prepend: site.url}}">{{ site.data.locale["read-more"][post.lang] }} &gt;</a>
+                <p class="card-text">{{ post.content | strip_html | truncatewords: 10 }}</p>
+                <span class="read-more fz-lg" title="{{ site.data.locale["read-more"][page.lang] }} &gt;">+</span>
               </div>
-            </div> <!-- /.card -->
-          </div>
+            </a> <!-- /.card -->
+          </div> <!-- /.col -->
         {% endfor %}
       </div> <!-- /.row -->
     </div> <!-- /.col -->

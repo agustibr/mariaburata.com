@@ -1,8 +1,9 @@
-$color-pink: #e8b5a7 /* #F9AAA2 /* #F9A995 */
+$color-pink: #F9A995 // #F1B098
 $color-white: #FFF
 $color-gray-dark: #373a3c
 $gradient-height: 25vh
 $viewport-height: 50vh
+$base-font-weight: 300
 /* BS */
 
 $brand-primary: $color-pink
@@ -12,6 +13,19 @@ $body-color-post: $color-gray-dark
 $link-color: darken($color-pink, 10)
 $font-family-sans-serif: 'Venus SB Medium Extended', "Helvetica Neue", Helvetica, Arial, sans-serif
 $card-border-color: transparent
-//font-family: 'Venus SB Bold Extended'
-//font-family: 'Venus SB Medium Extended'
-//font-family: 'Venus SB Roman'
+
+$font-size-root:             16px     // !default;
+$font-size-base:             1rem     // !default;
+$spacer:                     $font-size-base
+$lead-font-size:             2.625rem //1.25rem  // !default;
+$lead-font-weight:           $base-font-weight      // !default;
+$font-size-h1:               3rem // 2.25rem  // !default;
+$headings-font-weight:       $base-font-weight
+$lead-font-weight:           $base-font-weight      // !default;
+$headings-margin-bottom:     ($spacer * 4) + ($spacer / 2) //4.55rem
+
+/* end BS */
+
+$fz-lg: $font-size-h1    // Titols i menú
+$fz-txt: $lead-font-size // Text base
+$fz-sm: $font-size-base  // botons i txt aux

@@ -19,7 +19,7 @@ layout: default
     </div>
     <div class="row">
       <div class="col-md-3 text-left">
-        <a href="{{ landing-link[0].url | prepend: site.baseurl | prepend: site.url }}">{{ site.title | upcase }}</a>
+        <a href="{{ landing-link[0].url | prepend: site.baseurl | prepend: site.url }}">{{ site.data.locale["landing"][page.lang] | upcase }}</a>
       </div>
       <div class="col-md-6">&nbsp;</div>
       <div class="col-md-3 text-right">

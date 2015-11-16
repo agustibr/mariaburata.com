@@ -1,3 +1,30 @@
+#blog .card,
+body.blog .card
+  color: $color-white
+  text-decoration: none
+  display: block
+  .card-img-blog
+    display: block
+    overflow: hidden
+    text-align: center
+    width: 100%
+    height: 20rem
+    img
+      height: 100%
+      width: auto
+      display: block
+      @extend %inkwell
+  .card-block
+    padding-left: 0
+    padding-right: 0
+  .card-title
+    @extend .fz-txt
+  .card-text
+    @extend .fz-sm
+  .read-more
+    @extend .fz-txt
+    line-height: .6em
+    color: $color-white
 .blog
   header
     background: $color-pink
@@ -16,5 +43,6 @@
       margin-bottom: $spacer-y
   .card-title,
   .card-text,
-  .card-text p
-    color: $color-pink
+  .card-text p,
+  .card .read-more
+    color: $color-pink !important
