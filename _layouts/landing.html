@@ -4,7 +4,10 @@ bodyClass: landing
 ---
 <section id="top">
   <div class="content text-center">
-    <h1 class="site-title">{{ site.data.site.name }}</h1>
+    <h1 class="site-title">
+      {{ site.data.site.name }}<br>
+    </h1>
+    <p class="fz-sm">{{ site.data.site.description[page.lang] }}</p>
   </div>
 </section>
 <section id="video" class="no-gutters">
