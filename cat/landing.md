@@ -2,7 +2,7 @@
 layout: landing
 permalink: /
 sibling: landing
-vimeoId: 52693887
+vimeoId: 147468244
 about:
   - "Em dic Maria Burata i després de diplomar-me en Enginyeria vaig veure que el meu camí era un altre."
   - "Gràcies a la pràctica del ioga, vaig començar a prendre consciència del cos i a connectar amb ell."
