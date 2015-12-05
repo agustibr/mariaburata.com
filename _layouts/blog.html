@@ -7,13 +7,15 @@ layout: default
   <header class="container-fluid">
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
-        <h1>{{ page.title | upcase }}</h1>
-        <p>
-          <small>
-          {% if page.categories %}{{ page.categories | array_to_sentence_string }} | {% endif %}
-          {{ page.date | date: "%d %b %Y" }}
-          </small>
-        </p>
+        <h1>{{ page.title }}</h1>
+        {% if page.sibling != 'blog' %}
+          <p>
+            <small>
+            {% if page.categories %}{{ page.categories | array_to_sentence_string }} | {% endif %}
+            {{ page.date | date: "%d %b %Y" }}
+            </small>
+          </p>
+        {% endif %}
       </div>
     </div>
     <div class="row">

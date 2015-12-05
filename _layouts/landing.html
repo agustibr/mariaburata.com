@@ -1,151 +1,179 @@
 ---
-layout: page
-bodyClass: landing
+layout: default
 ---
-<section id="top">
-  <div class="content text-center">
-    <h1 class="site-title">
-      {{ site.data.site.name }}<br>
-    </h1>
-    <p class="fz-sm">{{ site.data.site.description[page.lang] }}</p>
-  </div>
-</section>
-<section id="video" class="no-gutters">
-  <div class="content">
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="vimeo-video embed-responsive-item" src="//player.vimeo.com/video/{{page.vimeoId}}?color=F9A995&title=0&byline=0&portrait=0" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-<section id="massage">
-  <div class="content lead">
-    <h1>{{ site.data.locale["massage"][page.lang] }}</h1>
-    {{ content }}
+<body class="page">
+  {% include header.html %}
+
+  <div class="vertical-center-container container-fluid">
+    <section id="top">
+      <div class="content text-center">
+        <h1 class="site-title">
+          {{ site.data.site.name }}<br>
+        </h1>
+      </div>
+    </section>
+    <section id="video" class="no-gutters">
+      <div class="content">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="vimeo-video embed-responsive-item" src="//player.vimeo.com/video/{{page.vimeoId}}?color=F9A995&title=0&byline=0&portrait=0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="massage">
+      <div class="content lead">
+        <h1>{{ site.data.locale["massage"][page.lang] }}</h1>
+        {{ content }}
+
+        <hr id="prices">
+
+        <h1>{{ site.data.locale["prices"][page.lang] }}</h1>
+        <ul class="list-unstyled">
+          {% assign eu60 = {{site.data.site.prices.unit.local["60 min"] }}%}
+          {% assign eu90 = {{site.data.site.prices.unit.local["90 min"] }}%}
+          <li>{{ site.data.locale.prices.unit.local[page.lang] | replace: "[[min]]", "60" | replace: "[[eur]]", eu60 }}</li>
+          <li>{{ site.data.locale.prices.unit.local[page.lang] | replace: "[[min]]", "90" | replace: "[[eur]]", eu90 }}</li>
+        </ul>
+        <ul class="list-unstyled">
+          {% assign eu60 = {{site.data.site.prices.unit.home.["60 min"] }}%}
+          {% assign eu90 = {{site.data.site.prices.unit.home.["90 min"] }}%}
+          <li>{{ site.data.locale.prices.unit.home[page.lang] | replace: "[[min]]", "60" | replace: "[[eur]]", eu60 }}</li>
+          <li>{{ site.data.locale.prices.unit.home[page.lang] | replace: "[[min]]", "90" | replace: "[[eur]]", eu90 }}</li>
+        </ul>
+        <ul class="list-unstyled">
+          {% assign eu180 = {{site.data.site.prices.pack3.local.["180 min"] }}%}
+          {% assign eu270 = {{site.data.site.prices.pack3.local.["270 min"] }}%}
+          <li>{{ site.data.locale.prices.pack3.local.title[page.lang] }}</li>
+          <li>{{ site.data.locale.prices.pack3.local.txt[page.lang] | replace: "[[min]]", "180" | replace: "[[eur]]", eu180 }}</li>
+          <li>{{ site.data.locale.prices.pack3.local.txt[page.lang] | replace: "[[min]]", "270" | replace: "[[eur]]", eu270 }}</li>
+          <li class="fz-sm">{{ site.data.locale.prices.pack3.note[page.lang] }}</li>
+        </ul>
+
+        <ul class="list-unstyled">
+          {% assign eu180 = {{site.data.site.prices.pack3.home.["180 min"] }}%}
+          {% assign eu270 = {{site.data.site.prices.pack3.home.["270 min"] }}%}
+          <li>{{ site.data.locale.prices.pack3.home.title[page.lang] }}</li>
+          <li>{{ site.data.locale.prices.pack3.home.txt[page.lang] | replace: "[[min]]", "180" | replace: "[[eur]]", eu180 }}</li>
+          <li>{{ site.data.locale.prices.pack3.home.txt[page.lang] | replace: "[[min]]", "270" | replace: "[[eur]]", eu270 }}</li>
+          <li class="fz-sm">{{ site.data.locale.prices.pack3.note[page.lang] }}</li>
+        </ul>
+      </div>
+    </section>
 
     <hr>
 
-    <h1>{{ site.data.locale["prices"][page.lang] }}</h1>
-    <ul class="list-unstyled">
-      {% assign eu60 = {{site.data.site.prices.unit.local["60 min"] }}%}
-      {% assign eu90 = {{site.data.site.prices.unit.local["90 min"] }}%}
-      <li>{{ site.data.locale.prices.unit.local[page.lang] | replace: "[[min]]", "60" | replace: "[[eur]]", eu60 }}</li>
-      <li>{{ site.data.locale.prices.unit.local[page.lang] | replace: "[[min]]", "90" | replace: "[[eur]]", eu90 }}</li>
-    </ul>
-    <ul class="list-unstyled">
-      {% assign eu60 = {{site.data.site.prices.unit.home.["60 min"] }}%}
-      {% assign eu90 = {{site.data.site.prices.unit.home.["90 min"] }}%}
-      <li>{{ site.data.locale.prices.unit.home[page.lang] | replace: "[[min]]", "60" | replace: "[[eur]]", eu60 }}</li>
-      <li>{{ site.data.locale.prices.unit.home[page.lang] | replace: "[[min]]", "90" | replace: "[[eur]]", eu90 }}</li>
-    </ul>
-    <ul class="list-unstyled">
-      {% assign eu180 = {{site.data.site.prices.pack3.local.["180 min"] }}%}
-      {% assign eu270 = {{site.data.site.prices.pack3.local.["270 min"] }}%}
-      <li>{{ site.data.locale.prices.pack3.local.title[page.lang] }}</li>
-      <li>{{ site.data.locale.prices.pack3.local.txt[page.lang] | replace: "[[min]]", "180" | replace: "[[eur]]", eu180 }}</li>
-      <li>{{ site.data.locale.prices.pack3.local.txt[page.lang] | replace: "[[min]]", "270" | replace: "[[eur]]", eu270 }}</li>
-      <li class="fz-sm">{{ site.data.locale.prices.pack3.note[page.lang] }}</li>
-    </ul>
+    <section id="about">
+      <div class="content lead">
+        <h1>{{ site.data.locale["about"][page.lang] }}</h1>
+        {% for paragraph in page.about %}
+          {{ paragraph | markdownify }}
+        {% endfor %}
+      </div>
+    </section>
 
-    <ul class="list-unstyled">
-      {% assign eu180 = {{site.data.site.prices.pack3.home.["180 min"] }}%}
-      {% assign eu270 = {{site.data.site.prices.pack3.home.["270 min"] }}%}
-      <li>{{ site.data.locale.prices.pack3.home.title[page.lang] }}</li>
-      <li>{{ site.data.locale.prices.pack3.home.txt[page.lang] | replace: "[[min]]", "180" | replace: "[[eur]]", eu180 }}</li>
-      <li>{{ site.data.locale.prices.pack3.home.txt[page.lang] | replace: "[[min]]", "270" | replace: "[[eur]]", eu270 }}</li>
-      <li class="fz-sm">{{ site.data.locale.prices.pack3.note[page.lang] }}</li>
-    </ul>
-  </div>
-</section>
-<section id="about">
-  <div class="content lead">
-    <h1>{{ site.data.locale["about"][page.lang] }}</h1>
-    {% for paragraph in page.about %}
-      {{ paragraph | markdownify }}
-    {% endfor %}
-  </div>
-</section>
-<section id="gift">
-  <div class="content lead">
-    <h1>{{ site.data.locale["gift"][page.lang] }}</h1>
-    <p>
-      {% for paragraph in page.gift %}
-        {{ paragraph }}<br>
-      {% endfor %}
-    </p>
-  </div>
-</section>
+    <hr>
 
-<section id="contact" class="no-gutters">
-  <div class="content text-center">
-    <h1>{{ site.data.locale["contact"][page.lang] }}</h1>
-    <p class="mb-3rem">{{ page.contact.text }}</p>
-    <p class="fz-txt">{{ page.contact.tel }}</p>
-    <p class="fz-sm">{{ page.contact.note }}</p>
-    <ul class="list-unstyled mb-3rem">
-      {% for addr in page.contact.address %}
-        <li class="fz-txt">{{ addr }}</li>
-      {% endfor %}
-    </ul>
-
-    <form class="text-center">
-      <input type="hidden" id="lang" placeholder="{{ page.lang }}">
-      <fieldset class="form-group">
-        <input type="text" class="form-control" id="name" placeholder="{{ page.form.name }}">
-      </fieldset>
-      <fieldset class="form-group">
-        <input type="email" class="form-control" id="email" placeholder="{{ page.form.mail }}">
-      </fieldset>
-       <fieldset class="form-group">
-        <textarea class="form-control" id="message" rows="1" placeholder="{{ page.form.sms }}" contenteditable></textarea>
-      </fieldset>
-      <button type="submit" class="btn btn-primary btn-sm">{{ page.form.send }}</button>
-    </form>
-
-    <div class="embed-responsive embed-responsive-21by9">
-      <div id="map" class="embed-responsive-item"></div>
-    </div>
-
-  </div>
-</section>
-
-<section id="blog">
-  <div class="content">
-    <h1 class="text-center">{{ site.data.locale["blog"][page.lang] }}</h1><br>
-    <div class="row">
-      <div class="col-md-1">&nbsp;</div>
-      <div class="col-md-10">
-        <div class="row">
-          {% assign postsInLang = (site.posts | where: "lang" , page.lang) %}
-          {% for post in postsInLang | limit: 3 %}
-            <div class="col-md-4">
-              <a class="card" href="{{ post.url | prepend:site.baseurl | prepend: site.url}}" >
-                <div class="card-img-blog">
-                  <img class="" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }} image"/>
-                </div>
-                <div class="card-block">
-                  <h4 class="card-title">{{ post.title }}</h4>
-                  <p class="card-text">{{ post.content | strip_html | truncatewords: 10 }}</p>
-                  <span class="read-more fz-lg" title="{{ site.data.locale["read-more"][page.lang] }} &gt;">+</span>
-                </div>
-              </a> <!-- /.card -->
-            </div> <!-- /.col -->
+    <section id="gift">
+      <div class="content lead">
+        <h1>{{ site.data.locale["gift"][page.lang] }}</h1>
+        <p>
+          {% for paragraph in page.gift %}
+            {{ paragraph }}<br>
           {% endfor %}
-        </div> <!-- /.row -->
-      </div> <!-- /.col -->
-      <div class="col-md-1">&nbsp;</div>
+        </p>
+      </div>
+    </section>
 
-    </div> <!-- /.row -->
+    <hr>
+
+    <section id="contact" class="no-gutters">
+      <div class="content text-center">
+        <h1>{{ site.data.locale["contact"][page.lang] }}</h1>
+        <div class="mb-4rem">{{ page.contact.text1 | markdownify }}{{ page.contact.text2 | markdownify }}</div>
+        <ul class="list-unstyled mb-4rem">
+            <li class="fz-txt">{{ page.contact.tel }}</li>
+          {% for addr in page.contact.address %}
+            <li class="fz-txt">{{ addr }}</li>
+          {% endfor %}
+        </ul>
+
+        <form class="text-center">
+          <input type="hidden" id="lang" placeholder="{{ page.lang }}">
+          <fieldset class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="{{ page.form.name }}">
+          </fieldset>
+          <fieldset class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="{{ page.form.mail }}">
+          </fieldset>
+           <fieldset class="form-group">
+            <textarea class="form-control" id="message" rows="1" placeholder="{{ page.form.sms }}" contenteditable></textarea>
+          </fieldset>
+          <button type="submit" class="btn btn-landing-mb btn-primary btn-primary-outline">{{ page.form.send }}</button>
+        </form>
+
+        <div class="embed-responsive embed-responsive-21by9">
+          <div id="map" class="embed-responsive-item"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="content">
+        <h1 class="text-center">{{ site.data.locale["blog"][page.lang] }}</h1><br>
+        <div class="row">
+          <div class="col-md-1">&nbsp;</div>
+          <div class="col-md-10">
+            <div class="row">
+              {% assign postsInLang = (site.posts | where: "lang" , page.lang) %}
+              {% for post in postsInLang | limit: 6 %}
+                <div class="col-md-4">
+                  <a class="card" href="{{ post.url | prepend:site.baseurl | prepend: site.url}}" >
+                    <div class="card-img-blog">
+                      <img class="" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }} image"/>
+                    </div>
+                    <div class="card-block">
+                      <h4 class="card-title">{{ post.title }}</h4>
+                      <p class="card-text">{{ post.content | strip_html | truncatewords: 10 }}</p>
+                      <span class="read-more fz-lg" title="{{ site.data.locale["read-more"][page.lang] }} &gt;">+</span>
+                    </div>
+                  </a> <!-- /.card -->
+                </div> <!-- /.col -->
+              {% endfor %}
+            </div> <!-- /.row -->
+          </div> <!-- /.col -->
+          <div class="col-md-1">&nbsp;</div>
+          <div class="col-md-12 text-center">
+            {% assign blog-link = site.pages | where:"sibling", "blog" | where:"lang", page.lang %}
+            <a class="btn btn-landing-mb btn-primary btn-primary-outline" href="{{ blog-link[0].url | prepend: site.baseurl | prepend: site.url }}">{{ site.data.locale["all-posts"][page.lang] }}</a>
+          </div>
+        </div> <!-- /.row -->
+
+      </div>
+    </section>
+
+    <section>
+      <p class="credits">
+        {{ site.data.site.name }} ® 2015 — <a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a> — {{ site.data.site.tel }}
+      </p>
+      <p class="credits">
+        Web Design by <a href="http://basora.info" target="_blank">Basora</a> — Coded by <a href="http://www.agusti.cat" target="_blank">Agusti B.R.</a><br>
+        Video by <a href="" target="_blank">Pol Camprubí</a><br>
+        {{ site.data.site.description[page.lang] }}
+      </p>
+    </section>
+
+    <section id="bottom">
+      <div class="content text-center">
+        <h1 class="site-title">
+          {{ site.data.site.name }}<br>
+        </h1>
+      </div>
+    </section>
 
   </div>
-</section>
-<section>
-  <p class="credits">
-    {{ site.data.site.name }} ® 2015 — <a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a> — {{ site.data.site.tel }}
-  </p>
-  <p class="credits">
-    Web Design by <a href="http://basora.info" target="_blank">Basora</a> — Coded by <a href="http://www.agusti.cat" target="_blank">Agusti B.R.</a><br>
-    Video by <a href="" target="_blank">Pol Camprubí</a><br>
-    {{ site.data.site.description[page.lang] }}
-  </p>
-</section>
-<section id="bottom"></section>
+
+  {% include footer.html %}
+
+  {% include foot.html %}
+</body>

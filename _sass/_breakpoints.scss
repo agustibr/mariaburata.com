@@ -1,0 +1,62 @@
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 34em,
+  // Medium screen / tablet
+  md: 48em,
+  // Large screen / desktop
+  lg: 62em,
+  // Extra large screen / wide desktop
+  xl: 75em
+) !default;
+
+
+@mixin respond-to($media) {
+  @if $media == sm {
+    @media only screen and (max-width: map-get($grid-breakpoints, sm)) { @content; }
+  }
+  /*
+  */
+  @else if $media == md {
+    @media only screen and (min-width: map-get($grid-breakpoints, sm)+1) and (max-width: map-get($grid-breakpoints, md) - 1) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: map-get($grid-breakpoints, md) + 1) and (max-width: map-get($grid-breakpoints, lg) - 1) { @content; }
+  }
+  @else if $media == xl {
+    @media only screen and (min-width: map-get($grid-breakpoints, lg)) { @content; }
+  }
+}
+
+.sneak {
+  display: block;
+  // display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  color: white;
+  width: 100% ;
+  font-size: .5rem;
+  background: black;
+  &:before{
+    display: block;
+    padding: .3em;
+  }
+  @include respond-to(sm) {
+    color: green;
+    &:before{content:"[sm] phone";}
+  }
+  @include respond-to(md) {
+    color: orange;
+    &:before{content:"[md] tablet";}
+  }
+  @include respond-to(lg) {
+    color: red;
+    &:before{content:"[lg] laptop";}
+  }
+  @include respond-to(xl) {
+    color: pink;
+    &:before{content:"[xl] desktop";}
+  }
+}

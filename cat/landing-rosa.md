@@ -1,7 +1,8 @@
 ---
 layout: landing
-permalink: /
-sibling: landing
+permalink: rosa/
+sibling: pink
+pink: true
 vimeoId: 147468244
 about:
   - "Em dic Maria Burata i després de diplomar-me en Enginyeria vaig veure que el meu camí era un altre."
@@ -17,9 +18,9 @@ gift:
   - "Envia’m un correu electrònic o truca’m i t’explicaré les possibles opcions."
 
 contact:
-  text1: "Vens tu? o vinc jo? Pots venir al meu espai o vinc a casa teva. Consulta els [preus](#prices)."
-  text2: "Per a qualsevol consulta no dubtis a trucar-me o escriure’m a través d’aquest formulari:"
-  tel: "Tel: 620 191 209"
+  text1: "Vens tu? o vinc jo? Pots venir al meu espai o vinc a casa teva. Consulta els preus."
+  text2: "Per a qualsevol consulta no dubtis a trucar-me o escriure’m a través d’aquest formulari."
+  tel: "T: 620 191 209"
   address:
     - "C/ Zamora 99-101 sobreàtic 1ª"
     - "08018 (Poblenou)"

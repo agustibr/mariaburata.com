@@ -6,18 +6,13 @@ $ ->
   $("#mb-nav a").click ->
     $('#collapseMenu').collapse('hide')
     getScroll()
-  ###
-  $(window).on 'scroll', ->
-    elementPosFromTop = $("#bottom").position().top
-    elementHeight = $('#bottom').innerHeight()
-    elementStart = elementPosFromTop - (elementHeight*2)
-    scrollPos = $(window).scrollTop()
-    if elementStart < scrollPos
-      $('.credits').fadeIn()
-    else
-      $('.credits').fadeOut('fast')
-    getScroll()
-  ###
+
+  $('input,textarea').focus(->
+    $(this).data('placeholder', $(this).attr('placeholder')).attr 'placeholder', ''
+    return
+  ).blur ->
+    $(this).attr 'placeholder', $(this).data('placeholder')
+    return
 
 getScroll = ->
   container = $('#video')

@@ -56,9 +56,9 @@
     </ul>
   </div>
 </div>
-<nav class="navbar navbar-fixed-top grad-top text-center">
+<nav class="navbar navbar-fixed-top grad-top text-center {% if page.pink %}grad-pink{% endif %}">
   <button
-    class="btn btn-primary-outline btn-menu-trigger"
+    class="btn btn-primary-outline btn-menu-trigger {% if page.pink %}btn-pink{% endif %}"
     type="button"
     data-toggle="collapse"
     data-target="#collapseMenu"

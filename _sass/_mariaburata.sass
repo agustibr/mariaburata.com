@@ -19,7 +19,8 @@ body.temp
   .container-fluid
     padding-right: 0
     padding-left: 0
-
+.container-fluid
+  max-width: 1900px
 html,
 body.page,
 body.temp,
@@ -38,11 +39,16 @@ body.temp,
   height: $gradient-height
   background: linear-gradient(to top, rgba($color-white, 0), $color-white)
   border-top: 1em solid $color-white
-
+  &.grad-pink
+    background: linear-gradient(to top, rgba($color-pink, 0), $color-pink)
+    border-top: .5em solid $color-pink
 .grad-bottom
   height: $gradient-height
   background: linear-gradient(to bottom, rgba($color-white, 0), $color-white)
   border-bottom: 1em solid $color-white
+  &.grad-pink
+    background: linear-gradient(to bottom, rgba($color-pink, 0), $color-pink)
+    border-bottom: .5em solid $color-pink
 
 .fz-txt
   font-size: $fz-txt
@@ -75,13 +81,6 @@ section
     vertical-align: middle
 
 .scroll-down
-  // font-size: .65em
-  // -webkit-transform: rotate(90deg)
-  // -moz-transform: rotate(90deg)
-  // -ms-transform: rotate(90deg)
-  // -o-transform: rotate(90deg)
-  // filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
-  // transform: rotate(90deg)
   position: absolute
   display: inline-block
   bottom: 3em

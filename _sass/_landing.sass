@@ -13,19 +13,26 @@ hr
   border-color: $color-white
   border-width: .2rem
   width: 8rem
-  margin: (($spacer * 4) + ($spacer / 2)) auto
+  section &
+    margin: (($spacer * 4) + ($spacer / 2)) auto
 
 .embed-responsive
   margin: 4rem 0
-.mb-3rem
-  margin-bottom: 3rem
+.mb-4rem
+  margin-bottom: 4rem
 #contact
   h1
     margin-bottom: 1rem
-  form,
+  p
+    margin-bottom: 0
+  a
+    color: $color-white
+    text-decoration: underline
+  li
+    line-height: 1.3em
+  form
     margin-bottom: 2em
   .form-control
-    // padding: $input-padding-y $input-padding-x
     @extend .fz-txt
     line-height: 1em
     text-align: center
@@ -38,6 +45,14 @@ hr
     @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s)
     &#name
       border-top: 1px solid $color-white
+.btn-landing-mb
+  color: $color-white
+  &:hover
+    color: rgba($color-white, .7)
+  &:active,
+  &:focus
+    color: $color-pink
+
   ::-webkit-input-placeholder
     color: $color-white
   :-moz-placeholder
@@ -46,8 +61,8 @@ hr
     color: $color-white
   :-ms-input-placeholder
     color: $color-white
-  .btn
-    font-size: 1.5rem
+  .embed-responsive
+    margin-bottom: 0
 
 .credits
   text-align: center

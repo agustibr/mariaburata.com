@@ -7,7 +7,7 @@ body.post
     padding-bottom: $spacer-y
     h1
       font-weight: normal
-      text-transform: uppercase
+      margin-bottom: .3rem
     p
       margin-bottom: 0
     a
@@ -21,6 +21,9 @@ body.post
     .post-image
       margin-top: ($spacer-y * 2)
       margin-bottom: $spacer-y
+    a
+      color: $body-color-post
+      text-decoration: underline
   nav
     position: relative
     .next,
@@ -50,5 +53,22 @@ body.post
       -o-transform: rotate(90deg)
       filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
       transform: rotate(90deg)
+    +respond-to(md)
+      height: 6em
+      background: $color-white
+      .next,
+      .prev
+        position: absolute
+        top: auto
+        bottom: 0
+    +respond-to(sm)
+      height: 6em
+      background: $color-white
+      .next,
+      .prev
+        position: absolute
+        top: auto
+        bottom: 0
+
   footer
     color: $color-white
