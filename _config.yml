@@ -12,6 +12,8 @@ google-analytics-id: ""
 # Build settings
 markdown: kramdown
 permalink: /blog/:title
+gems:
+  - jekyll-coffeescript
 sass:
     style: :compressed
 exclude: ['_prose.yml','.editorconfig','.gitignore']
