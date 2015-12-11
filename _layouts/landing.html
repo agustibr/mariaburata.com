@@ -5,13 +5,15 @@ layout: default
   {% include header.html %}
 
   <div class="vertical-center-container container-fluid">
-    <section id="top">
+    <section class="fs" id="top">
       <div class="content text-center">
         <h1 class="site-title">
           {{ site.data.site.name }}<br>
         </h1>
       </div>
     </section>
+  </div>
+  <div class="container-fluid">
     <section id="video" class="no-gutters">
       <div class="content">
         <div class="embed-responsive embed-responsive-16by9">
@@ -89,14 +91,14 @@ layout: default
     <section id="contact" class="no-gutters">
       <div class="content text-center">
         <h1>{{ site.data.locale["contact"][page.lang] }}</h1>
-        <div class="mb-4rem">{{ page.contact.text1 | markdownify }}{{ page.contact.text2 | markdownify }}</div>
+        <div class="mb-4rem">{{ page.contact.text1 | markdownify }}</div>
         <ul class="list-unstyled mb-4rem">
             <li class="fz-txt">{{ page.contact.tel }}</li>
           {% for addr in page.contact.address %}
             <li class="fz-txt">{{ addr }}</li>
           {% endfor %}
         </ul>
-
+        <div class="mb-2rem">{{ page.contact.text2 | markdownify }}</div>
         <form class="text-center">
           <input type="hidden" id="lang" placeholder="{{ page.lang }}">
           <fieldset class="form-group">
@@ -130,7 +132,7 @@ layout: default
                 <div class="col-md-4">
                   <a class="card" href="{{ post.url | prepend:site.baseurl | prepend: site.url}}" >
                     <div class="card-img-blog">
-                      <img class="" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }} image"/>
+                      <img class="center-block" src="{{ site.baseurl | prepend: site.url }}{{ post.image | prepend: '/images/'}}" alt="{{ post.title }} image"/>
                     </div>
                     <div class="card-block">
                       <h4 class="card-title">{{ post.title }}</h4>

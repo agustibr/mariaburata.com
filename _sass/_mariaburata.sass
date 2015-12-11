@@ -8,7 +8,7 @@
   -moz-osx-font-smoothing: grayscale
 
 body
-  letter-spacing: 0.05em
+  letter-spacing: 0.03em
   font-weight: $base-font-weight
   font-size: 1.1rem
 
@@ -38,37 +38,40 @@ body.temp,
 
 .grad-top
   height: $gradient-height
-  background: linear-gradient(to top, rgba($color-white, 0), $color-white)
-  border-top: 1em solid $color-white
-  &.grad-pink
-    background: linear-gradient(to top, rgba($color-pink, 0), $color-pink)
-    border-top: .5em solid $color-pink
+  background: linear-gradient(to top, rgba($color-pink, 0), $color-pink)
+  border-top: 1em solid $color-pink
+
 .grad-bottom
   height: $gradient-height
-  background: linear-gradient(to bottom, rgba($color-white, 0), $color-white)
-  border-bottom: 1em solid $color-white
-  &.grad-pink
-    background: linear-gradient(to bottom, rgba($color-pink, 0), $color-pink)
-    border-bottom: .5em solid $color-pink
+  background: linear-gradient(to bottom, rgba($color-pink, 0), $color-pink)
+  border-bottom: 1em solid $color-pink
 
 .fz-txt
   font-size: $fz-txt
   font-weight: $base-font-weight
+  +respond-to(md)
+    font-size: $fz-txt-mobile
 .fz-lg
   font-size: $fz-lg
   font-weight: $base-font-weight
+  +respond-to(md)
+    font-size: $fz-lg-mobile
 .fz-sm
   font-size: $fz-sm
   font-weight: $base-font-weight
   letter-spacing: -0.01em
   line-height: 1.1em
+  +respond-to(md)
+    font-size: $fz-sm-mobile
+h1
+  +respond-to(md)
+    font-size: $fz-lg-mobile
+    margin-bottom: 3rem
 
 section
-  height: $viewport-height
   width: 100%
   padding-right: ($grid-gutter-width / 2)
   padding-left: ($grid-gutter-width / 2)
-  display: table
   &.no-gutters
     padding-right: 0
     padding-left: 0
@@ -78,6 +81,10 @@ section
   .content
     padding-top: ($gradient-height / 2)
     padding-bottom: ($gradient-height / 2)
+section.fs
+  height: $viewport-height
+  display: table
+  .content
     display: table-cell
     vertical-align: middle
 

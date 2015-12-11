@@ -4,6 +4,10 @@
   text-align: center
   padding-right: 3em
   padding-left: 3em
+  +respond-to(md)
+    font-size: $fz-txt-mobile
+    padding-right: 1.3em
+    padding-left: 1.3em
   p
     margin-bottom: 1.5rem
     line-height: 1.2
@@ -20,6 +24,8 @@ hr
   margin: 4rem 0
 .mb-4rem
   margin-bottom: 4rem
+.mb-2rem
+  margin-bottom: 2rem
 #contact
   h1
     margin-bottom: 1rem
@@ -53,14 +59,13 @@ hr
   &:focus
     color: $color-pink
 
-  ::-webkit-input-placeholder
-    color: $color-white
-  :-moz-placeholder
-    color: $color-white
-  ::-moz-placeholder
-    color: $color-white
-  :-ms-input-placeholder
-    color: $color-white
+::-webkit-input-placeholder
+  color: $color-white
+::-moz-placeholder
+  opacity: 1
+  color: $color-white
+::-ms-input-placeholder
+  color: $color-white
   .embed-responsive
     margin-bottom: 0
 

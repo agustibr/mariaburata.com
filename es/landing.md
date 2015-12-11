@@ -28,9 +28,9 @@ contact:
     - "Metro: L1 Marina | L4 Bogatell"
 
 form:
-  name: Nombre
-  mail: Mail
-  sms: Mensaje
+  name: Escribe tu nombre aquí
+  mail: Tu email
+  sms: Tu mensaje
   send: ENVIAR
 ---
 
