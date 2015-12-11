@@ -13,6 +13,8 @@ google-analytics-id: ""
 markdown: kramdown
 permalink: /blog/:title
 gems:
+  - jekyll-sitemap
+  - jekyll-feed
   - jekyll-coffeescript
 sass:
     style: :compressed
