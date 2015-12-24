@@ -29,9 +29,11 @@
           <li class="nav-item">
             <a href="{{ "#contact" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">{{ site.data.locale["contact"][page.lang] }}</a>
           </li>
+          {% comment %}
           <li class="nav-item">
             <a href="{{ "#blog" | prepend: landing-link[0].url | prepend: site.baseurl | prepend:site.url }}" class="nav-link">{{ site.data.locale["blog"][page.lang] }}</a>
           </li>
+          {% endcomment %}
           <li>&nbsp;</li><li>&nbsp;</li>
           {% include lang-switcher.html %}
         </ul>
