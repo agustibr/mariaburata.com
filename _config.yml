@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   el privilegi d’estar en contacte amb l’altre en un aprenentatge
   constant del tractaments energètics i físics. Actualment m’estic
   formant com a osteòpata
-baseurl: "/mariaburata.com" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" #"http://yourdomain.com" # the base hostname & protocol for your site
 google-analytics-id: ""
 
