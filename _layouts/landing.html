@@ -99,13 +99,13 @@ layout: default
           {% endfor %}
         </ul>
         <div class="mb-2rem">{{ page.contact.text2 | markdownify }}</div>
-        <form class="text-center">
-          <input type="hidden" id="lang" placeholder="{{ page.lang }}">
+        <form class="text-center" action="//formspree.io/hola@mariaburata.com" method="POST">
+          <input type="hidden" id="lang" name="language" placeholder="{{ page.lang }}">
           <fieldset class="form-group">
-            <input type="text" class="form-control" id="name" placeholder="{{ page.form.name }}">
+            <input type="text" class="form-control" id="name" name="name" placeholder="{{ page.form.name }}">
           </fieldset>
           <fieldset class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="{{ page.form.mail }}">
+            <input type="email" class="form-control" id="email" name="_replyto" placeholder="{{ page.form.mail }}">
           </fieldset>
            <fieldset class="form-group">
             <textarea class="form-control" id="message" rows="1" placeholder="{{ page.form.sms }}" contenteditable></textarea>
@@ -119,6 +119,7 @@ layout: default
 
       </div>
     </section>
+
     {% comment %}
     <section id="blog">
       <div class="content">
@@ -154,6 +155,7 @@ layout: default
       </div>
     </section>
     {% endcomment %}
+
     <section>
       <p class="credits">
         {{ site.data.site.name }} ® 2015 — <a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a> — {{ site.data.site.tel }}
@@ -165,13 +167,7 @@ layout: default
       </p>
     </section>
 
-    <section id="bottom">
-      <div class="content text-center">
-        <h1 class="site-title">
-          {{ site.data.site.name }}<br>
-        </h1>
-      </div>
-    </section>
+    <div id="bottom"></div>
 
   </div>
 
