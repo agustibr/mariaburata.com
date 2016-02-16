@@ -17,7 +17,7 @@ layout: default
     <section id="video" class="no-gutters">
       <div class="content">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="vimeo-video embed-responsive-item" src="//player.vimeo.com/video/{{page.vimeoId}}?color=F9A995&title=0&byline=0&portrait=0" allowfullscreen></iframe>
+          <iframe class="vimeo-video embed-responsive-item" src="//player.vimeo.com/video/{{page.vimeoId}}?color=F9A995&title=0&byline=0&portrait=0&loop=1" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -119,7 +119,7 @@ layout: default
 
       </div>
     </section>
-
+    {% comment %}
     <section id="blog">
       <div class="content">
         <h1 class="text-center">{{ site.data.locale["blog"][page.lang] }}</h1><br>
@@ -153,14 +153,14 @@ layout: default
 
       </div>
     </section>
-
+    {% endcomment %}
     <section>
       <p class="credits">
         {{ site.data.site.name }} ® 2015 — <a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a> — {{ site.data.site.tel }}
       </p>
       <p class="credits">
         Web Design by <a href="http://basora.info" target="_blank">Basora</a> — Coded by <a href="http://www.agusti.cat" target="_blank">Agusti B.R.</a><br>
-        Video by <a href="" target="_blank">Pol Camprubí</a><br>
+        Video by <a href="http://arturpolcamprubi.com/" target="_blank">Pol Camprubí</a> — Music by <a href="http://www.murmur.audio/" target="_blank">Murmur</a><br>
         {{ site.data.site.description[page.lang] }}
       </p>
     </section>
