@@ -80,7 +80,7 @@ layout: default
         <h1>{{ site.data.locale["gift"][page.lang] }}</h1>
         <p>
           {% for paragraph in page.gift %}
-            {{ paragraph }}<br>
+            {{ paragraph | markdownify }}<br>
           {% endfor %}
         </p>
       </div>

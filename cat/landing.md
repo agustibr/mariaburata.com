@@ -14,7 +14,7 @@ about:
 
 gift:
   - "Vols regalar una o varies sessions de massatge ayurveda?"
-  - "Envia’m un correu electrònic o truca’m i t’explicaré les possibles opcions."
+  - "Envia’m un [correu electrònic](mailto:hola@mariaburata.com?subject=Vull regalar massatge ayurveda) o truca’m i t’explicaré les possibles opcions."
 
 contact:
   text1: "Vens tu? o vinc jo? Pots venir al meu espai o vinc a casa teva. Consulta els [preus](#prices)."

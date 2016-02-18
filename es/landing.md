@@ -14,10 +14,10 @@ about:
 
 gift:
   - "¿Quieres regalar una o varias sesiones de masaje ayurveda?"
-  - "Mándame un correo electrónico y te explicaré las diferentes opciones para regalar un momento de paz y relax"
+  - "Mándame un [correo electrónico](mailto:hola@mariaburata.com?subject=Regalar un momento de paz y relax) y te explicaré las diferentes opciones para regalar un momento de paz y relax"
 
 contact:
-  text1: "¿Vienes tú? ¿o voy yo? Puedes venir a mi espacio o vengo a tu casa. Consulta los [precios](#prices)."
+  text1: "¿Vienes tú? ¿o voy yo? Puedes venir a mi espacio o voy a tu casa. Consulta los [precios](#prices)."
   text2: "Para cualquier consulta no dudes en llamarme o escribirme a través de este formulario:"
   tel: "T: 620 191 209"
   note: "¿Vienes tú o voy yo?"
