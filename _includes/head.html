@@ -6,9 +6,11 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.site.name }}, {{ site.data.site.description[page.lang] }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.site.description[page.lang] }}{% endif %}">
 
+  <link rel="stylesheet" href="{{ "/css/venusSB.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  {% comment %}
   <script type="text/javascript">
     (function() {
         var path = '//easy.myfonts.net/v2/js?sid=116616(font-family=Venus+SB+Bold+Extended)&sid=116615(font-family=Venus+SB+Medium+Extended)&sid=116613(font-family=Venus+SB+Roman)&key=hHzsbpLKPl',
@@ -21,4 +23,5 @@
         head.appendChild(trial);
     })();
   </script>
+  {% endcomment %}
 </head>
