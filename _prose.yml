@@ -6,6 +6,12 @@ prose:
   relativeLinks: "absolute-url.jsonp"
   metadata:
     "es/_posts":
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publicat?"
+          help: "Clickat apareixerà a la web"
+          value: true
       - name: "layout"
         field:
           element: "hidden"
