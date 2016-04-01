@@ -5,7 +5,7 @@ prose:
   media: 'images'
   relativeLinks: "absolute-url.jsonp"
   metadata:
-    _posts:
+    "es/_posts":
       - name: "layout"
         field:
           element: "hidden"
