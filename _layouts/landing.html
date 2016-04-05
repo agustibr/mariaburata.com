@@ -100,7 +100,7 @@ layout: default
         </ul>
         <div class="mb-2rem">{{ page.contact.text2 | markdownify }}</div>
         <form class="text-center" action="//formspree.io/hola@mariaburata.com" method="POST">
-          <input type="hidden" id="lang" name="language" placeholder="{{ page.lang }}">
+          <input type="hidden" id="lang" name="language" value="{{ page.lang }}">
           <fieldset class="form-group">
             <input type="text" class="form-control" id="name" name="name" placeholder="{{ page.form.name }}">
           </fieldset>
@@ -108,7 +108,7 @@ layout: default
             <input type="email" class="form-control" id="email" name="_replyto" placeholder="{{ page.form.mail }}">
           </fieldset>
            <fieldset class="form-group">
-            <textarea class="form-control" id="message" rows="1" placeholder="{{ page.form.sms }}" contenteditable></textarea>
+            <textarea class="form-control" id="message" name="message" rows="1" placeholder="{{ page.form.sms }}" contenteditable></textarea>
           </fieldset>
           <button type="submit" class="btn btn-landing-mb btn-primary btn-primary-outline">{{ page.form.send }}</button>
         </form>
