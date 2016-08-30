@@ -9,16 +9,10 @@ prices:
     local:
       "60 min": "50 eur"
       "90 min": "60 eur"
-    home:
-      "60 min": "60 eur"
-      "90 min": "65 eur"
   pack3:
     local:
       "180 min": "140 eur"
       "270 min": "170 eur"
-    home:
-      "180 min": "170 eur"
-      "270 min": "185 eur"
   vat:
     cat: IVA inclòs
     es: IVA incluido

@@ -21,21 +21,11 @@ prices:
     local:
       cat: "Massatge de [[min]] min. [[eur]]."
       es: "Masaje de [[min]] min. [[eur]]."
-    home:
-      cat: "Massatge [[min]] min. a domicili [[eur]]."
-      es: "Masaje [[min]] min. a domicilio [[eur]]."
   pack3:
     local:
       title:
         cat: "3 massatges mensuals:"
         es: "3 masajes mensuales:"
-      txt:
-        cat: "[[min]] min./mes [[eur]]."
-        es: "[[min]] min./mes [[eur]]."
-    home:
-      title:
-        cat: "3 massatges mensuals a domicili:"
-        es: "3 masajes mensuales a domicilio:"
       txt:
         cat: "[[min]] min./mes [[eur]]."
         es: "[[min]] min./mes [[eur]]."
