@@ -30,18 +30,18 @@ prices:
         cat: "3 massatges mensuals:"
         es: "3 masajes mensuales:"
       txt:
-        cat: "[[min]] min./mes [[eur]] eur."
-        es: "[[min]] min./mes [[eur]] eur."
+        cat: "[[min]] min./mes [[eur]]."
+        es: "[[min]] min./mes [[eur]]."
     home:
       title:
         cat: "3 massatges mensuals a domicili:"
         es: "3 masajes mensuales a domicilio:"
       txt:
-        cat: "[[min]] min./mes [[eur]] eur."
-        es: "[[min]] min./mes [[eur]] eur."
+        cat: "[[min]] min./mes [[eur]]."
+        es: "[[min]] min./mes [[eur]]."
     note:
-      cat: "(no acumulables d’un mes a un altre)"
-      es: "(no acumulables de un mes a otro)"
+      cat: "no acumulables d’un mes a un altre"
+      es: "no acumulables de un mes a otro"
 
 about:
   cat: "Qui sóc?"

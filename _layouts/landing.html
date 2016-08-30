@@ -35,12 +35,14 @@ layout: default
           {% assign eu90 = {{site.data.site.prices.unit.local["90 min"] }}%}
           <li>{{ site.data.locale.prices.unit.local[page.lang] | replace: "[[min]]", "60" | replace: "[[eur]]", eu60 }}</li>
           <li>{{ site.data.locale.prices.unit.local[page.lang] | replace: "[[min]]", "90" | replace: "[[eur]]", eu90 }}</li>
+          <li class="fz-sm">({{ site.data.site.prices.vat[page.lang] }})</li>
         </ul>
         <ul class="list-unstyled">
           {% assign eu60 = {{site.data.site.prices.unit.home.["60 min"] }}%}
           {% assign eu90 = {{site.data.site.prices.unit.home.["90 min"] }}%}
           <li>{{ site.data.locale.prices.unit.home[page.lang] | replace: "[[min]]", "60" | replace: "[[eur]]", eu60 }}</li>
           <li>{{ site.data.locale.prices.unit.home[page.lang] | replace: "[[min]]", "90" | replace: "[[eur]]", eu90 }}</li>
+          <li class="fz-sm">({{ site.data.site.prices.vat[page.lang] }})</li>
         </ul>
         <ul class="list-unstyled">
           {% assign eu180 = {{site.data.site.prices.pack3.local.["180 min"] }}%}
@@ -48,7 +50,7 @@ layout: default
           <li>{{ site.data.locale.prices.pack3.local.title[page.lang] }}</li>
           <li>{{ site.data.locale.prices.pack3.local.txt[page.lang] | replace: "[[min]]", "180" | replace: "[[eur]]", eu180 }}</li>
           <li>{{ site.data.locale.prices.pack3.local.txt[page.lang] | replace: "[[min]]", "270" | replace: "[[eur]]", eu270 }}</li>
-          <li class="fz-sm">{{ site.data.locale.prices.pack3.note[page.lang] }}</li>
+          <li class="fz-sm">({{ site.data.site.prices.vat[page.lang] }}. {{ site.data.locale.prices.pack3.note[page.lang] }})</li>
         </ul>
 
         <ul class="list-unstyled">
@@ -57,7 +59,7 @@ layout: default
           <li>{{ site.data.locale.prices.pack3.home.title[page.lang] }}</li>
           <li>{{ site.data.locale.prices.pack3.home.txt[page.lang] | replace: "[[min]]", "180" | replace: "[[eur]]", eu180 }}</li>
           <li>{{ site.data.locale.prices.pack3.home.txt[page.lang] | replace: "[[min]]", "270" | replace: "[[eur]]", eu270 }}</li>
-          <li class="fz-sm">{{ site.data.locale.prices.pack3.note[page.lang] }}</li>
+          <li class="fz-sm">({{ site.data.site.prices.vat[page.lang] }}. {{ site.data.locale.prices.pack3.note[page.lang] }})</li>
         </ul>
       </div>
     </section>
@@ -128,8 +130,8 @@ layout: default
           <div class="col-md-1">&nbsp;</div>
           <div class="col-md-10">
             <div class="row">
-              {% assign postsInLang = (site.posts | where: "lang" , page.lang) %}
-              {% for post in postsInLang | limit: 6 %}
+              {% assign postsInLang = site.posts | where_exp:"lang", page.lang %}
+              {% for post in postsInLang limit: 6 %}
                 <div class="col-md-4">
                   <a class="card" href="{{ post.url | prepend:site.baseurl | prepend: site.url}}" >
                     <div class="card-img-blog">
