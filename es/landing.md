@@ -22,7 +22,7 @@ contact:
   tel: "T: 620 191 209"
   note: "¿Vienes tú o voy yo?"
   address:
-    - "C/ Zamora 99-101 sobreático 1ª"
+    - "C/ Pallars 84-88, 6<sup>o</sup>-3ª"
     - "08018 (Poblenou)"
     - "Barcelona"
     - "Metro: L1 Marina | L4 Bogatell"

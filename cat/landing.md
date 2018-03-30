@@ -21,7 +21,7 @@ contact:
   text2: "Per a qualsevol consulta no dubtis a trucar-me o escriure’m a través d’aquest formulari:"
   tel: "Tel: 620 191 209"
   address:
-    - "C/ Zamora 99-101 sobreàtic 1ª"
+    - "C/ Pallars 84-88, 6<sup>e</sup>-3ª"
     - "08018 (Poblenou)"
     - "Barcelona"
     - "Metro: L1 Marina | L4 Bogatell"
